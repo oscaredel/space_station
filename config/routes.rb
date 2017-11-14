@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :designers
+  devise_for :retailers
   # ALWAYS PUT ROOT ROUTE AT THE BEGINNING OF THE FILE
   root to: 'pages#home'
 
-  devise_for :retailers
+  # devise_for :retailers
 
   get 'contact', to: 'pages#contact'
   get 'about', to: 'pages#about'
