@@ -5,5 +5,5 @@ class Retailer < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   # has_many :store_collections # FUTURE
-  has_one :store_collection
+  has_one :store_collection, dependent: :destroy
 end

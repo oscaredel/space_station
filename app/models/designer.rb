@@ -3,7 +3,7 @@ class Designer < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_many :collections
-  has_many :looks
-  has_many :products
+  has_many :collections, dependent: :destroy
+  has_many :looks, dependent: :destroy
+  has_many :products, dependent: :destroy
 end

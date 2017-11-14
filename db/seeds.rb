@@ -6,23 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-
-# Ingredient.create(name: "Lemon")
-# Ingredient.create(name: "Ice")
-# Ingredient.create(name: "mint leaves")
-# Ingredient.create(name: "Light rum")
-# Ingredient.create(name: "Applejack")
-# Ingredient.create(name: "Gin")
-# Ingredient.create(name: "Dark rum")
-# Ingredient.create(name: "Sweet Vermouth")
-# Ingredient.create(name: "Scotch")
+puts "Creating initial seed"
+Designer.destroy_all
+Retailer.destroy_all
 
 oscar = Designer.create!(
   first_name: "Oscar",
   last_name: "de la Renta",
   email: "Oscar@lalala.com",
-  encrypted_password: "123456",
+  password: "123456",
   profile_picture: "https://www.thefamouspeople.com/profiles/images/oscar-de-la-renta-2.jpg",
   city: "Santo Domingo",
   age: 82,
@@ -34,119 +26,71 @@ spring_2018 = Collection.create!(
   year: 2018,
   detail: "Newest collection from Oscar de la Renta, straight from the grave",
   designer: oscar
-)
+  )
 
-monica = retailer = Retailer.create!(
+monica = Retailer.create!(
   first_name: "Monica",
   last_name: "Geller",
   email: "monica@geller.com",
-  encrypted_password: "123456",
+  password: "123456",
   profile_picture: "https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F71c3ee5d-582f-4901-a519-59d49d17f091.png",
   city: "New York",
   age: 25,
   detail: "Hi I'm Monica. I live in New York with my 5 best friends. I'll always be there for them"
   )
 
-Designers
-first_name: string
-last_name: string
-email: string
-password: string
-profile_picture: string
-city: string
-age: int
-detail: text
+superpilot = Look.create!(
+  name: "Cool Pilot",
+  detail: "Buy these clothes if you want to look like a cool pilot",
+  picture_1: "https://i.pinimg.com/564x/25/6f/93/256f935c526173a953d9e3fdac1edb84--manfred-von-richthofen-flying-ace.jpg",
+  picture_2: "http://c8.alamy.com/comp/HF8TF0/the-nazi-propaganda-image-shows-a-combat-pilot-of-the-german-luftwaffe-HF8TF0.jpg",
+  picture_3: "https://s-media-cache-ak0.pinimg.com/originals/81/38/9d/81389d3a74ef97186144c668a29bb6e2.jpg",
+  collection: spring_2018,
+  designer: oscar
+  )
 
-generate model Designers
+nicehat = Product.create!(
+  name: "Pilot hat",
+  detail: "Real leather. Craftmanship design. Authetic war relic",
+  color: "Black",
+  sizes: [30,32,34,36],
+  picture_1: "http://www.epicmilitaria.com/media/catalog/category/resize/section-pic_94.jpg",
+  picture_2: "http://www.reddickmilitaria.com/images/products/0102-201-2.jpg",
+  picture_3: "http://www.warhats.com/uploads/5/7/1/5/5715187/4287377_orig.jpg",
+  picture_4: "http://thumbs4.ebaystatic.com/d/l225/m/mHWjF9sjJiCez1R5l0Z75Rg.jpg",
+  collection: spring_2018,
+  designer: oscar
+  )
 
-Retailers
-first_name: string
-last_name: string
-email: string
-password: string
-profile_picture: string
-detail: text
-age: int
-store_name: string
-city: string
-store_picture_1: string
-store_picture_2: string
-store_picture_3: string
+lookproduct = LookProduct.create!(
+  look: superpilot,
+  product: nicehat
+  )
 
-Collections
-season: string
-year: int
-detail:text
-# designer: oscar
+sc = StoreCollection.create!(
+  season: "Spring",
+  year: 2018,
+  details: "My new collection for next year, lalala",
+  retailer: monica
+  )
 
-generate model Collection season year:integer detail:text designer:references
+sp = StoreProduct.create!(
+  product: nicehat,
+  store_collection: sc
+  )
 
-Looks
-name: string
-detail: text
-picture_1: string
-picture_2: string
-picture_3: string
-collection_id
-designer_id
+designerorder = DesignerOrder.create!(
+  total_quote: 10.203,
+  order_requested: true,
+  order_confirmed: false,
+  store_collection: sc
+  )
 
-generate model Look name detail:text picture_1 picture_2 picture_3 collection:references designer:references
+op = OrderProduct.create!(
+  size: "XL",
+  quantity: 12,
+  store_product: sp,
+  designer_order: designerorder
+  )
 
-Products
-name: string
-detail: text
-color: string
-sizes: array
-picture_1: string
-picture_2: string
-picture_3: string
-picture_4: string
-collection_id
-designer_id
-
-generate model Product name detail:text color sizes:text picture_1 picture_2 picture_3 picture_4 collection:references designer:references
-
-Look_products
-look_id
-product_id
-
-generate model LookProduct look:references product:references
-
-# Store_collection Store Collection!
-season: string
-year: int
-detail: text
-retailer_id
-
-generate model StoreCollection season year:integer detail:text retailer:references
-
-Store_products
-product_id
-store_collection_id
-
-generate model StoreProducts references:product store_collection:references
-
-Designer_orders
-total_quote: decimal
-order_requested: bool
-order_confirmed: bool
-store_collection_id
-
-generate model DesignerOrders total_quote:decimal order_requested:boolean order_confirmed:boolean store_collecton:references
-
-Order_products
-size: string
-quantity: int
-store_product_id
-designer_order_id
-
-generate model OrderProducts size quantity:integer store_product:references designer_order:references
-
-Conversations
-designer_id
-retailer_id
-
-Messages
-content: text
-sender: string
-conversation_id
+puts "done!"
