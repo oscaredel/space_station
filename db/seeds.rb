@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Creating initial seed"
+OrderProduct.destroy_all
 Designer.destroy_all
 Retailer.destroy_all
 
@@ -44,7 +45,7 @@ umit = Designer.create!(
   last_name: "Benan",
   email: "umithimself@benan.common",
   password: "123456",
-  profile_picture: "https://www.umitbenan.com/img/umit-benan-logo-1495536864.jpg",
+  profile_picture: "https://www.umitbenan.com/themes/default-bootstrap/img/2.jpg",
   city: "Milan",
   age: 2009,
   detail:" Umit Benan wanted to be a filmmaker, but diverted to fashion rather naturally, keeping the urge to tell stories intact. He makes no real distinction between life, fantasy and fiction because really there isn’t one. “I am interested in contrasts. That’s what life is all about, isn’t it?” he says. His clothes – real, bold, imaginative – follow suit.
@@ -63,7 +64,7 @@ manish = Designer.create!(
   password: "123456",
   profile_picture: "https://martjackstorage.blob.core.windows.net/in-resources/bdc03b70-0e3c-44d5-a4d5-68c7fad6cbd6/Images/userimages/manisharora_logo.png",
   city: "New Delhi",
-  age: "1997",
+  age: 1997,
   detail: "Manish Arora is one of the most celebrated and inspiring contemporary designers in the fashion world today. He is known for his astute craftsmanship and unique play on colors, such as his trademark palette of pink and gold.
 It was in 1997, that the world 1st viewed Manish's design aesthetic with the launch of his label 'Manish Arora'. With this he grew from strength to strength gaining a devoted following in the fashion world, which finally led to Manish exhibiting at the London Fashion Week in 2005. In 2007, Manish showcased for the 1st time in Paris Fashion Week. He became a member of the distinguished French Federation of Pret-a-Porter in 2009
 Today, Manish sells his creations worldwide across prestigious stores such as Printemps, Joyce and Saks 5th Avenue. In 2011, Manish was appointed the Creative Director for Iconic French Fashion House 'Paco Robanne' where he designed two successful collections.
@@ -99,16 +100,16 @@ monica = Retailer.create!(
   detail: "Hi I'm Monica. I live in New York with my 5 best friends. I'll always be there for them"
 )
 
-# 290sqm = Retailer.create!(
-#   first_name: "290sqm",
-#   last_name: "Ido de Voos",
-#   detail: "concept store in Istanbul with a branch in Zurich and Amsterdam",
-#   email: "dido@290sqm.com",
-#   password: "1222909",
-#   profile_picture:"https://ist.290sqm.com/image/catalog/layout/logo_290sqm.png",
-#   city: "Istanbul, Zurich",
-#   age: 2010,
-#   )
+two_hundred_ninety_sqm = Retailer.create!(
+  first_name: "290sqm",
+  last_name: "Ido de Voos",
+  detail: "concept store in Istanbul with a branch in Zurich and Amsterdam",
+  email: "dido@290sqm.com",
+  password: "1222909",
+  profile_picture:"https://ist.290sqm.com/image/catalog/layout/logo_290sqm.png",
+  city: "Istanbul, Zurich",
+  age: 2010,
+)
 
 stranger = Retailer.create!(
   first_name: "Stranger",
@@ -146,6 +147,19 @@ jac_pants = Product.create!(
   picture_2: "https://www.umitbenan.com/1675/multicolor-jacquard-tejano-bomber.jpg",
   picture_3: "https://www.umitbenan.com/1674/multicolor-jacquard-tejano-bomber.jpg",
   picture_4: "https://www.umitbenan.com/1673/multicolor-jacquard-tejano-bomber.jpg",
+  collection: fw_2018,
+  designer: umit
+  )
+
+karate_kid_trench_two = Product.create!(
+  name: "KARATE KID TRENCH COAT",
+  detail: "100% Wool",
+  color: "Navy",
+  sizes: [44,46,48],
+  picture_1: "https://www.umitbenan.com/1841/kk-trench-coat.jpg",
+  picture_2: "https://www.umitbenan.com/1843/kk-trench-coat.jpg",
+  picture_3: "https://www.umitbenan.com/1844/kk-trench-coat.jpg",
+  picture_4: "https://www.umitbenan.com/1842/kk-trench-coat.jpg",
   collection: fw_2018,
   designer: umit
   )
