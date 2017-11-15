@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171114115855) do
+ActiveRecord::Schema.define(version: 20171115120228) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20171114115855) do
     t.string "city"
     t.integer "age"
     t.text "detail"
+    t.string "brand"
     t.index ["email"], name: "index_designers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_designers_on_reset_password_token", unique: true
   end
@@ -77,6 +78,8 @@ ActiveRecord::Schema.define(version: 20171114115855) do
     t.bigint "designer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "picture_4"
+    t.string "picture_5"
     t.index ["collection_id"], name: "index_looks_on_collection_id"
     t.index ["designer_id"], name: "index_looks_on_designer_id"
   end
@@ -105,6 +108,7 @@ ActiveRecord::Schema.define(version: 20171114115855) do
     t.bigint "designer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "picture_5"
     t.index ["collection_id"], name: "index_products_on_collection_id"
     t.index ["designer_id"], name: "index_products_on_designer_id"
   end
