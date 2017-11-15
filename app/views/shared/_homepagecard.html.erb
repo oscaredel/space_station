@@ -1,0 +1,21 @@
+<div class="row homepagecard">
+  <% products = Designer.find_by_brand("Umit Benan").products.sample(3) %>
+  <% products.each do |product| %>
+  <div class="col-xs-6 col-md-3">
+    <div class="homepagecard-picture" style="background-image:url('<%= image_path product.picture_1 %>');">
+    </div>
+  </div>
+  <% end %>
+  <div class="col-xs-6 col-md-3">
+    <div class="brand">
+      <div class="brand-avatar" style="background-image:url('<%= image_path Designer.find_by_brand("Umit Benan").profile_picture %>');">
+        <% link_to Designer.find_by_brand("Umit Benan") %>
+      </div>
+      <div class="brand-name">
+        <strong>
+          <%= link_to Designer.find_by_brand("Umit Benan").brand, Designer.find_by_brand("Umit Benan") %>
+        </strong>
+      </div>
+    </div>
+  </div>
+</div>
