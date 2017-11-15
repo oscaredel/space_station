@@ -28,29 +28,24 @@
 <!-- Looks and Products of designer -->
 <div class="col-md-8">
   <h1>Current collection: </h1>
-  <div class="product-card">
-    <ul>
-      <li>
-        product: <% @designer.products.each do |product| %>
-      </li>
-      <li>
-        Name: <%= product.name %>
-      </li>
-      <li>
-        Detail: <%= product.detail %>
-      </li>
-      <li>
-        Color: <%= product.color %>
-      </li>
-      <li>
-        Sizes: <%= product.sizes %>
-      </li>
-      <li>
-        <%= image_tag product.picture_1, height: 200, width: 200, crop: :fill %> <br>
-      </li>
-      <!-- <a href="#" class="btn-treehouse">Look at product</a> -->
-
-      <% end %>
+  <div class="products">
+      <div class="row">
+        <% @designer.products.each do |product| %>
+          <div class="col-xs-12">
+            <div class="product-card">
+              <div class="product-image">
+                <%= link_to designer_product_path(@designer, product) do %>
+                    <%= image_tag product.picture_1, height: 200, width: 200, crop: :fill %>
+                <% end %>
+              </div>
+              <div class="product-details">
+                <p><%= product.name %></p>
+                <p><%= product.detail %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </ul>
   </div>
 
