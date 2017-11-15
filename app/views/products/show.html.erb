@@ -1,2 +1,29 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<div class="container">
+  <div class="product-header">
+    <%= image_tag @product.designer.profile_picture, width: 300, crop: :fill %> <br>
+    <h1 class="text-center"><%= @product.designer.brand%></h1>
+    <h2> <%= @product.name %> </h2>
+
+    collection: <%= @product.collection.detail %>
+    sizes: <%= @product.sizes %> <br>
+    color: <%= @product.color %> <br>
+    detail: <%= @product.detail %> <br>
+  </div>
+  <div class = "row">
+    <div class="col-xs-3">
+      <%= image_tag @product.picture_1, class: "product-image" %>
+    </div>
+    <div class="col-xs-3">
+      <%= image_tag @product.picture_2, class: "product-image" %>
+    </div>
+    <div class="col-xs-3">
+      <%= image_tag @product.picture_3, class: "product-image" %>
+    </div>
+    <div class="col-xs-3">
+      <%= image_tag @product.picture_4, class: "product-image" %>
+    </div>
+  </div>
+
+</div>
+
+
