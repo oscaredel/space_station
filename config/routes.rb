@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   get 'designer/index'
+=======
+  get 'looks/show'
+
+  get 'looks/index'
+
+  get 'products/show'
+
+  get 'products/index'
+
+  get 'designers/show'
+
+  get 'designer/show'
+>>>>>>> master
 
   devise_for :designers
   devise_for :retailers
@@ -16,7 +30,7 @@ Rails.application.routes.draw do
       resources :products, only: [:show]
   end
 
-  resource :retailer, only: [:show, :edit, :update]
+  resource :retailer, only: [:show, :edit, :update, :index]
   resource :store_collection, only: [:show, :new, :create, :edit, :update] do
     resources :store_products, only: [:create]
   end
