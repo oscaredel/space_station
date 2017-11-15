@@ -1,0 +1,35 @@
+.homepagecard {
+  border: 2px solid darkgrey;
+  background-color: white;
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 2px 2px 5px gray;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.homepagecard-picture img {
+  height: 220px;
+  width: 220px;
+  border-radius: 6px;
+  border: 2px solid lightgrey;
+}
+
+.homepage-designer-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.homepage-designer-avatar img {
+  border-radius: 50%;
+  height: 160px;
+  width: 160px;
+  margin-bottom: 5px;
+  box-shadow: 2px 2px 5px gray;
+  border: 6px solid white;
+}

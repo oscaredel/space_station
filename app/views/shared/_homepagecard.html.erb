@@ -1,0 +1,21 @@
+<div class="row homepagecard">
+  <% products = Designer.find_by_first_name("Oscar").products.sample(3) %>
+  <% products.each do |product| %>
+    <div class="col-xs-6 col-md-3">
+
+      <div class="homepagecard-picture">
+        <%= image_tag product.picture_1 %>
+      </div>
+    </div>
+  <% end %>
+  <div class="col-xs-6 col-md-3">
+    <div class="homepage-designer-avatar">
+      <%= image_tag Designer.find_by_first_name("Oscar").profile_picture %>
+      <p>
+        <strong>
+          <%= Designer.find_by_first_name("Oscar").first_name + " " + Designer.find_by_first_name("Oscar").last_name %>
+        </strong>
+      </p>
+    </div>
+  </div>
+</div>
