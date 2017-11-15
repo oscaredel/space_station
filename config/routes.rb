@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'designer/index'
+
   devise_for :designers
   devise_for :retailers
   # ALWAYS PUT ROOT ROUTE AT THE BEGINNING OF THE FILE
