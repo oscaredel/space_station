@@ -1,20 +1,26 @@
-.product-card {
-  background-color: white;
-  box-shadow: 2px 2px 4px rgba(1,1,1, 0.2);
+.products {
   padding: 20px;
-  border-radius: 3px;
 
   .product-image {
     width: 200px;
     height: 200px;
     background-size: cover;
-    border-radius: 5%;
-    margin-left: auto;
-    margin-right: auto;
   }
-  ul {
-    list-style: none;
+
+  .product-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: white;
   }
+
+  .product-details {
+    max-width: 200px;
+  }
+
+
   span {
     font-weight: bolder;
   }
