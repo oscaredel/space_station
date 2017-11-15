@@ -1,0 +1,26 @@
+.bio-card {
+  background-color: white;
+  box-shadow: 2px 2px 4px rgba(1,1,1, 0.2);
+  padding: 20px;
+  border-radius: 3px;
+
+  .bio-image {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  ul {
+    list-style: none;
+  }
+  span {
+    font-weight: bolder;
+  }
+  h2 {
+    text-align: center;
+  }
+}
+
+

@@ -1,41 +1,56 @@
-
 <!-- Info about designer -->
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
-
-<%= image_tag @designer.profile_picture, height: 300, width: 400, crop: :fill %> <br>
-<h1><%=@designer.first_name %> <%= @designer.last_name %> </h1>
-
-email: <%= @designer.email %> <br>
-city: <%= @designer.city %> <br>
-age: <%= @designer.age %> <br>
-About me: <%= @designer.detail %> <br>
-
-
-    </div>
+    <div class="col-md-4">
+      <div class="bio-card">
+       <div class="bio-image" style="background-image:url('<%= image_path @designer.profile_picture %>');"></div>
+       <h2>
+        <%=@designer.first_name %> <%= @designer.last_name %>
+      </h2>
+      <ul>
+        <li>
+         <span> email:</span> <%= @designer.email %>
+       </li>
+       <li>
+        <span>city:</span> <%= @designer.city %>
+      </li>
+      <li>
+        <span>age:</span> <%= @designer.age %>
+      </li>
+      <li>
+        <span>About me:</span> <%= @designer.detail %>
+      </li>
+    </ul>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- Looks and Products of designer -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-
-
-
-
-    </div>
+<div class="col-md-8">
+  <h1>Current collection: </h1>
+  <div class="product-card">
+    <ul>
+      <li>
+        product: <% @designer.products.each do |product| %>
+      </li>
+      <li>
+        Name: <%= product.name %>
+      </li>
+      <li>
+        Detail: <%= product.detail %>
+      </li>
+      <li>
+        Color: <%= product.color %>
+      </li>
+      <li>
+        Sizes: <%= product.sizes %>
+      </li>
+      <li>
+        <%= image_tag product.picture_1, height: 200, width: 200, crop: :fill %> <br>
+      </li>
+    </ul>
+    <% end %>
   </div>
 </div>
+</div>
+</div>
+
