@@ -27,3 +27,15 @@
 }
 
 /* Build your own button classes ! */
+
+.btn-space-station {
+  background-color: #f49b3f;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 20px;
+  box-shadow: 2px 0px 4px rgba(1,1,1,0.2);
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
