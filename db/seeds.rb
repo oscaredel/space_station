@@ -10,18 +10,277 @@ puts "Creating initial seed"
 OrderProduct.destroy_all
 Designer.destroy_all
 Retailer.destroy_all
+Product.destroy_all
+Collection.destroy_all
 
-oscar = Designer.create!(
-  brand: "Oscar de la Renta",
-  first_name: "Oscar",
-  last_name: "de la Renta",
-  email: "Oscar@lalala.com",
-  password: "123456",
-  profile_picture: "https://www.thefamouspeople.com/profiles/images/oscar-de-la-renta-2.jpg",
-  city: "Santo Domingo",
+
+# ____RALPH LAUREN____________________________________________
+
+ralph = Designer.create!(
+  brand: "Ralph Lauren",
+  first_name: "Ralph",
+  last_name: "Lauren",
+  email: "ralph@lauren.com",
+  password: '123456',
+  profile_picture: "https://www.hellomagazine.com/imagenes//fashion/201211069968/ralph-lauren-rags-to-riches/0-50-97/ralph-face--z.jpg",
+  city: "London",
+  age: 71,
+  detail: "Drawing on his interests in sports, Ralph Lauren named his first full line of menswear ‘Polo' in 1968. He worked out of a single drawer from a showroom in the Empire State Building and made deliveries to stores himself.[13] By 1969, the Manhattan department store Bloomingdale's sold Lauren's men line exclusively. It was the first time that Bloomingdale's had given a designer their own in-store boutique."
+)
+
+rl_fw_2018 = Collection.create!(
+  season: "Fall/Winter",
+  year: 2018,
+  detail: "This is designed for the outdoor human",
+  designer: ralph
+)
+
+Product.create!(
+  name: "SLIM FIT - Basic T-shirt - black mask",
+  detail: "Custom Slim Fit: Polo Ralph Lauren's trimmest silhouette. Slightly fitted through the chest and the waist.",
+  color: "green",
+  sizes: [44,46,48,50,52],
+  picture_1: "https://mosaic01.ztat.net/vgs/media/pdp-gallery/PO/22/2O/03/FQ/11/PO222O03F-Q11@8.jpg",
+  picture_2: "https://mosaic02.ztat.net/vgs/media/pdp-zoom/PO/22/2O/03/FQ/11/PO222O03F-Q11@7.jpg",
+  picture_3: "https://mosaic01.ztat.net/vgs/media/pdp-zoom/PO/22/2O/03/FQ/11/PO222O03F-Q11@3.jpg",
+  picture_4: "https://mosaic02.ztat.net/vgs/media/pdp-zoom/PO/22/2O/03/FQ/11/PO222O03F-Q11@6.jpg",
+  collection: rl_fw_2018,
+  designer: ralph
+)
+
+Product.create!(
+  name: "Tracksuit bottoms - cruise navy",
+  detail: "Outer fabric material:86 cotton, 14 polyester. Fabric:Sweat. Washing instructions:Machine wash at 40°C",
+  color: "blue",
+  sizes: [44,46,48,50,52],
+  picture_1: "https://mosaic01.ztat.net/vgs/media/pdp-zoom/PO/22/2E/01/OK/11/PO222E01O-K11@8.jpg",
+  picture_2: "https://mosaic02.ztat.net/vgs/media/pdp-zoom/PO/22/2E/01/OK/11/PO222E01O-K11@7.jpg",
+  picture_3: "https://mosaic02.ztat.net/vgs/media/pdp-zoom/PO/22/2E/01/OK/11/PO222E01O-K11@6.jpg",
+  picture_4: "https://mosaic01.ztat.net/vgs/media/pdp-zoom/PO/22/2E/01/OK/11/PO222E01O-K11@10.jpg",
+  collection: rl_fw_2018,
+  designer: ralph
+)
+
+Product.create!(
+  name: "SPORT SLIM FIT - Shirt - silver smoke",
+  detail: "Outer fabric material:100 cotton. Washing instructions:Machine wash at 40°C",
+  color: "grey",
+  sizes: [44,46,48,50,52],
+  picture_1: "https://mosaic01.ztat.net/vgs/media/pdp-zoom/PO/22/2D/0B/JD/11/PO222D0BJ-D11@10.jpg",
+  picture_2: "https://mosaic02.ztat.net/vgs/media/pdp-zoom/PO/22/2D/0B/JD/11/PO222D0BJ-D11@9.jpg",
+  picture_3: "https://mosaic02.ztat.net/vgs/media/pdp-zoom/PO/22/2D/0B/JD/11/PO222D0BJ-D11@8.jpg",
+  picture_4: "https://mosaic01.ztat.net/vgs/media/pdp-zoom/PO/22/2D/0B/JD/11/PO222D0BJ-D11@7.jpg",
+  collection: rl_fw_2018,
+  designer: ralph
+)
+
+Product.create!(
+  name: "JULIANNA - Jumper - dark blue",
+  detail: "Outer fabric material:100 cotton. Washing instructions:Hand wash only, Dry cleanable",
+  color: "blue",
+  sizes: [44,46,48,50,52],
+  picture_1: "https://mosaic01.ztat.net/vgs/media/pdp-zoom/PO/22/1I/01/9K/14/PO221I019-K14@8.jpg",
+  picture_2: "https://mosaic02.ztat.net/vgs/media/pdp-zoom/PO/22/1I/01/9K/14/PO221I019-K14@7.jpg",
+  picture_3: "https://mosaic01.ztat.net/vgs/media/pdp-zoom/PO/22/1I/01/9K/14/PO221I019-K14@9.jpg",
+  picture_4: "https://mosaic02.ztat.net/vgs/media/pdp-gallery/PO/22/1I/01/9K/14/PO221I019-K14@6.jpg",
+  collection: rl_fw_2018,
+  designer: ralph
+)
+
+Product.create!(
+  name: "CLAIRE - Handbag - bourbon",
+  detail: "Outer material:Faux leather. Fabric:Synthetic leather",
+  color: "bruin",
+  sizes: [44,46,48,50,52],
+  picture_1: "https://mosaic01.ztat.net/vgs/media/pdp-gallery/L4/25/1P/00/1O/11/L4251P001-O11@10.jpg",
+  picture_2: "https://mosaic02.ztat.net/vgs/media/pdp-zoom/L4/25/1P/00/1O/11/L4251P001-O11@9.jpg",
+  picture_3: "https://mosaic01.ztat.net/vgs/media/pdp-zoom/L4/25/1P/00/1O/11/L4251P001-O11@8.jpg",
+  picture_4: "https://mosaic01.ztat.net/vgs/media/pdp-zoom/L4/25/1P/00/1O/11/L4251P001-O11@6.jpg",
+  collection: rl_fw_2018,
+  designer: ralph
+)
+
+
+
+
+
+# ____Coco Chanel____________________________________________
+
+coco = Designer.create!(
+  brand: "Coco Chanel",
+  first_name: "Coco",
+  last_name: "Chanel",
+  email: "coco@chanel.com",
+  password: '123456',
+  profile_picture: "https://static01.nyt.com/images/2017/01/29/us/29Emmitt-3/29Emmitt-3-blog427.jpg",
+  city: "Johannesburg",
   age: 82,
-  detail: "Super good designer, very much fashion"
-  )
+  detail: "In 1906, Chanel was working in the spa resort town of Vichy. Vichy boasted a profusion of concert halls, theatres and cafés where she hoped to achieve success as a performer.",
+)
+
+cc_fw_2018 = Collection.create!(
+  season: "Fall/Winter",
+  year: 2018,
+  detail: "This is for the advantures woman.",
+  designer: coco
+)
+
+Product.create!(
+  name: "CHANEL 2015 HAND-PAINTED TWEED JACKET",
+  detail: "Very Good. Faint wear throughout; light discoloration at interior arms; light discoloration at cuffs.",
+  color: "black",
+  sizes: [44,46,48,50,52],
+  picture_1: "https://product-images.therealreal.com/CHA167314_1_enlarged.jpg",
+  picture_2: "https://product-images.therealreal.com/CHA167314_2_product.jpg",
+  picture_3: "https://product-images.therealreal.com/CHA167314_3_enlarged.jpg",
+  picture_4: "https://product-images.therealreal.com/CHA167314_2_product.jpg",
+  collection: cc_fw_2018,
+  designer: coco
+)
+
+Product.create!(
+  name: "CHANEL 2017 GLITTERED TWEED JACKET W/ TAGS",
+  detail: "From the Pre-Spring 2017 Collection. Midnight and pale blue Chanel glittered tweed Jacket featuring sequin embellishments throughout",
+  color: "blue",
+  sizes: [44,46,48,50,52],
+  picture_1: "https://product-images.therealreal.com/CHA147774_1_enlarged.jpg",
+  picture_2: "https://product-images.therealreal.com/CHA147774_2_enlarged.jpg",
+  picture_3: "https://product-images.therealreal.com/CHA147774_3_enlarged.jpg",
+  picture_4: "https://product-images.therealreal.com/CHA147774_4_enlarged.jpg",
+  collection: cc_fw_2018,
+  designer: coco
+)
+
+Product.create!(
+  name: "ALEXANDER MCQUEEN WOOL ZIP-UP JACKET",
+  detail: "Terracotta wool Alexander McQueen wool jacket featuring long sleeves, dual zip pockets at sides, and asymmetrical zip closure at front.",
+  color: "red",
+  sizes: [44,46,48,50,52],
+  picture_1: "https://product-images.therealreal.com/ALE43108_1_enlarged.jpg",
+  picture_2: "https://product-images.therealreal.com/ALE43108_2_enlarged.jpg",
+  picture_3: "https://product-images.therealreal.com/ALE43108_3_enlarged.jpg",
+  picture_4: "https://product-images.therealreal.com/ALE43108_2_enlarged.jpg",
+  collection: cc_fw_2018,
+  designer: coco
+)
+
+Product.create!(
+  name: "CHANEL WOVEN HOUNDSTOOTH JACKET",
+  detail: "Black, white and creme Chanel woven houndstooth jacket with fringe trim and interlocking CC button closures at center front. Size not listed, estimated from measurements.",
+  color: "white",
+  sizes: [44,46,48,50,52],
+  picture_1: "https://product-images.therealreal.com/CHA198791_1_enlarged.jpg",
+  picture_2: "https://product-images.therealreal.com/CHA198791_2_enlarged.jpg",
+  picture_3: "https://product-images.therealreal.com/CHA198791_3_enlarged.jpg",
+  picture_4: "https://product-images.therealreal.com/CHA198791_1_enlarged.jpg",
+  collection: cc_fw_2018,
+  designer: coco
+)
+
+Product.create!(
+  name: "REED KRAKOFF 2015 SHEARLING VEST",
+  detail: "From the Pre-Fall 2015 Collection. Black Reed Krakoff shearling vest with mock neck, leather panels at sides, dual zip pockets and concealed zip closure at center front. Size not listed, estimated from measurements.",
+  color: "white",
+  sizes: [44,46,48,50,52],
+  picture_1: "https://product-images.therealreal.com/REE28431_1_enlarged.jpg",
+  picture_2: "https://product-images.therealreal.com/REE28431_2_enlarged.jpg",
+  picture_3: "https://product-images.therealreal.com/REE28431_3_enlarged.jpg",
+  picture_4: "https://product-images.therealreal.com/REE28431_2_enlarged.jpg",
+  collection: cc_fw_2018,
+  designer: coco
+)
+
+
+
+# ___Giorgio Armani____________________________________________
+
+armani = Designer.create!(
+  brand: "Giorgio Armani",
+  first_name: "Giorgio",
+  last_name: "Armani",
+  email: "giorgio@Armani",
+  password: '123456',
+  profile_picture: "http://images.vogue.it/imgs/galleries/encyclo/stilisti/009164/dl002401-235509_0x420.jpg",
+  city: "New York",
+  age: 52,
+  detail: "After his stint in the armed forces, Armani found a job as a window dresser at La Rinascente, a department store in Milan in 1957. He went on to become a seller for the menswear department, in which capacity he gained valuable experience in the marketing aspect of the fashion industry.",
+)
+
+ga_fw_2018 = Collection.create!(
+  season: "Fall/Winter",
+  year: 2018,
+  detail: "This is for the cool person.",
+  designer: armani
+)
+
+Product.create!(
+  name: "JACKET",
+  detail: "Very Good. Faint wear throughout; light discoloration at interior arms; light discoloration at cuffs.",
+  color: "blue",
+  sizes: [44,46,48,50,52],
+  picture_1: "https://cdn.yoox.biz/34/34804056ab_14_f.jpg",
+  picture_2: "https://cdn.yoox.biz/34/34804056ab_14_r.jpg",
+  picture_3: "https://cdn.yoox.biz/34/34804056ab_14_d.jpg",
+  picture_4: "https://cdn.yoox.biz/34/34804056ab_14_a.jpg",
+  collection: ga_fw_2018,
+  designer: armani
+)
+
+Product.create!(
+  name: "UTILITY SHORTS",
+  detail: "These fashionable utilitarian style shorts have enough cargo pockets to keep all your essentials close by no matter where the day takes you.",
+  color: "yellow",
+  sizes: [44,46,48,50,52],
+  picture_1: "https://cdn.yoox.biz/46/46539889wa_14_f.jpg",
+  picture_2: "https://cdn.yoox.biz/46/46539889wa_14_r.jpg",
+  picture_3: "https://cdn.yoox.biz/46/46539889wa_14_d.jpg",
+  picture_4: "https://cdn.yoox.biz/46/46539889wa_14_e.jpg",
+  collection: ga_fw_2018,
+  designer: armani
+)
+
+Product.create!(
+  name: "DEBOSSED LOGO SHORTS",
+  detail: "Weekend essential shorts in a comfy cotton blend are made with a ribbed waistband and a cool embossed logo on the side.",
+  color: "white",
+  sizes: [44,46,48,50,52],
+  picture_1: "https://cdn.yoox.biz/46/46530977ac_14_f.jpg",
+  picture_2: "https://cdn.yoox.biz/46/46530977ac_14_e.jpg",
+  picture_3: "https://cdn.yoox.biz/46/46530977ac_14_d.jpg",
+  picture_4: "https://cdn.yoox.biz/46/46530977ac_14_b.jpg",
+  collection: ga_fw_2018,
+  designer: armani
+)
+
+Product.create!(
+  name: "CHUNKY KNIT BLAZER",
+  detail: "This blazer-cardigan hybrid features the best of both worlds— a tailored fit and a chunky, textural knit.",
+  color: "grey",
+  sizes: [44,46,48,50,52],
+  picture_1: "https://cdn.yoox.biz/34/34775299pf_14_f.jpg",
+  picture_2: "https://cdn.yoox.biz/34/34775299pf_14_r.jpg",
+  picture_3: "https://cdn.yoox.biz/34/34775299pf_14_d.jpg",
+  picture_4: "https://cdn.yoox.biz/34/34775299pf_14_e.jpg",
+  collection: ga_fw_2018,
+  designer: armani
+)
+
+Product.create!(
+  name: "VELVET BELL-SLEEVE TOP",
+  detail: "Dramatic and holiday-ready, this luxe velvet top features statement-making bell sleeves and a cutout neckline.",
+  color: "grey",
+  sizes: [44,46,48,50,52],
+  picture_1: "https://cdn.yoox.biz/46/46550748al_14_f.jpg",
+  picture_2: "https://cdn.yoox.biz/46/46550748al_14_r.jpg",
+  picture_3: "https://cdn.yoox.biz/46/46550748al_14_e.jpg",
+  picture_4: "https://cdn.yoox.biz/46/46550748al_14_a.jpg",
+  collection: ga_fw_2018,
+  designer: armani
+)
+
+
+
+
 
 umit = Designer.create!(
   brand: "Umit Benan",
@@ -39,14 +298,6 @@ Umit Benan uses clothes to build personas, putting to good use the muti-culti li
 Freedom of expression is Umit’s main goal in life and the reason he decided to be a fashion-maker. With each collection, he addresses issues that touch him personally, be it misconceptions around a beard, the ethos of outlaw artists who wander metropolitan streets at night or memories of a girlfriend who loved menswear.
 Umit’s own brand of fashion-making might be charged with a narrative aura, but it’s the the clothes that really speak by themselves, oozing a quintessential masculinity. They are sophisticated, luxurious and sturdy: the wardrobe of choice of elegant men who get their hands dirty. Refined yet raw, the Umit Benan man is authentic, powerful, full of lively contrasts. Like life."
   )
-
-spring_2018 = Collection.create!(
-  season: "Spring",
-  year: 2018,
-  detail: "Head designer's arrival gifts",
-  designer: oscar
-  )
-
 
 fw_2018 = Collection.create!(
   season: "Spring",
@@ -92,19 +343,6 @@ stranger = Retailer.create!(
 
 
 
-
-superpilot = Look.create!(
-  name: "Cool Pilot",
-  detail: "Buy these clothes if you want to look like a cool pilot",
-  picture_1: "https://i.pinimg.com/564x/25/6f/93/256f935c526173a953d9e3fdac1edb84--manfred-von-richthofen-flying-ace.jpg",
-  picture_2: "http://c8.alamy.com/comp/HF8TF0/the-nazi-propaganda-image-shows-a-combat-pilot-of-the-german-luftwaffe-HF8TF0.jpg",
-  picture_3: "https://s-media-cache-ak0.pinimg.com/originals/81/38/9d/81389d3a74ef97186144c668a29bb6e2.jpg",
-  collection: spring_2018,
-  designer: oscar
-)
-
-
-
 jac_pants = Product.create!(
   name: "MULTICOLOR JACQUARD MORNING PANTS",
   detail: "55% Co - 42% Li - 2% Pl - 1% Pa",
@@ -144,43 +382,6 @@ karate_pants = Product.create!(
   designer: umit
   )
 
-karate_inspired = Look.create!(
-  name: "bosphoruson-the-way-home",
-  detail: "the collection inspired by Umit's childhood in Istanbul",
-  picture_1: "https://www.umitbenan.com/239/fisherman-look.jpg",
-  picture_2: "https://www.umitbenan.com/240/fisherman-look.jpg",
-  picture_3: "https://www.umitbenan.com/241/fisherman-look.jpg",
-  picture_4: "https://www.umitbenan.com/19-bosphoruson-the-way-home",
-  picture_5: "https://www.umitbenan.com/c/19-medium_default/bosphoruson-the-way-home.jpg",
-  collection: fw_2018,
-  designer: umit
-  )
-
-karatelook = LookProduct.create!(
-  product: karate_pants,
-  look: karate_inspired
-)
-
-nicehat = Product.create!(
-  name: "Pilot hat",
-  detail: "Real leather. Craftmanship design. Authetic war relic",
-  color: "Black",
-  sizes: [30,32,34,36],
-  picture_1: "http://www.epicmilitaria.com/media/catalog/category/resize/section-pic_94.jpg",
-  picture_2: "http://www.reddickmilitaria.com/images/products/0102-201-2.jpg",
-  picture_3: "http://www.warhats.com/uploads/5/7/1/5/5715187/4287377_orig.jpg",
-  picture_4: "http://thumbs4.ebaystatic.com/d/l225/m/mHWjF9sjJiCez1R5l0Z75Rg.jpg",
-  collection: spring_2018,
-  designer: oscar
-  )
-
-
-lookproduct = LookProduct.create!(
-  look: superpilot,
-  product: nicehat
-  )
-
-
 sc = StoreCollection.create!(
   season: "Spring",
   year: 2018,
@@ -188,23 +389,11 @@ sc = StoreCollection.create!(
   retailer: monica
   )
 
-sp = StoreProduct.create!(
-  product: nicehat,
-  store_collection: sc
-  )
-
 designerorder = DesignerOrder.create!(
   total_quote: 10.203,
   order_requested: true,
   order_confirmed: false,
   store_collection: sc
-  )
-
-op = OrderProduct.create!(
-  size: "XL",
-  quantity: 12,
-  store_product: sp,
-  designer_order: designerorder
   )
 
 puts "done!"
