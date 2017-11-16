@@ -9,7 +9,6 @@
 <div class="container">
   <h2 class="text-center">Store Wishlist for <%= @retailer.store_collection.season %> <%= @retailer.store_collection.year %> </h2 class="text-center">
     <div class="row">
-
       <% @store_products_grouped_by_designer.each do |designer, store_products| %>
         <h3><%= designer.brand %></h3>
         <% store_products.each do |store_product| %>
