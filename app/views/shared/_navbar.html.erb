@@ -39,7 +39,7 @@
    <!-- Avatar with dropdown menu -->
 
       <!-- Links when logged in -->
-    <%= link_to "Store Collection", retailer_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Store Collection", retailer_path, class: "space-station-navbar-link" %>
 
 
     <!-- Avatar with dropdown menu -->
@@ -68,7 +68,9 @@
         <%= link_to "Selections", "#", class: "space-station-navbar-link"  %>
       </li>
       <li>
-        <%= link_to "Cart", "#", class: "space-station-navbar-link"  %>
+        <%= link_to "#", class: "space-station-navbar-link" do %>
+        <i class="fa fa-shopping-cart"></i>
+        <% end %>
       </li>
       <li>
         <div class="dropdown">
