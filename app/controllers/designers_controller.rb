@@ -1,4 +1,4 @@
-class DesignersController < ApplicationController
+ class DesignersController < ApplicationController
   def show
     @designer = Designer.find(params[:id])
   end
