@@ -23,22 +23,6 @@ oscar = Designer.create!(
   detail: "Super good designer, very much fashion"
   )
 
-rocket = Designer.create!(
-  brand: "Rocket X Lunch",
-  first_name: "Yoon",
-  last_name: "Xi",
-  email: "moonyoon@rocket.com",
-  password: "123456",
-  profile_picture: "http://rocketxlunch.com/web/upload/category/editor/2015/08/20/70ed2ec10447ab72d0eafc51c49a43a7.png",
-  city: "Seoul",
-  age: 2010,
-  detail: "ROCKET X LUNCH outstands by its color combinations and design per se, without its logo.
-Launched 2010, ROCKET X LUNCHhas held 4 collections every year and been active domestically and internationally.
-This brand displays humorous designs through mixing things and surpassing common expectations as its brand name is implying.
-By doing so, ROCKET X LUNCHhas become a popular brand which is accepted as trendy and original with reasonable price among the young fashion influencers.
-"
-  )
-
 umit = Designer.create!(
   brand: "Umit Benan",
   first_name: "Umit",
@@ -54,23 +38,6 @@ After graduation, Umit landed jobs with prestigious designers in New York and in
 Umit Benan uses clothes to build personas, putting to good use the muti-culti life experiences accumulated in a chaotic city full of contrasts such as Istanbul or the mingling of different characters and cultures experienced in the dorms of boarding school. It’s these mixes and frictions that get him going. “I don’t like perfection” he states, having mastered the art of perfect imperfection. Street-casting, thereafter, becomes an essential tool: not as a show trick, however, but as an integral phase of the design process. When Umit finds the character who epitomizes the mood he has in mind for the season, he builds a whole fictional story around him, writing everything down in detail like the storyteller he is and finally getting down to the clothes.
 Freedom of expression is Umit’s main goal in life and the reason he decided to be a fashion-maker. With each collection, he addresses issues that touch him personally, be it misconceptions around a beard, the ethos of outlaw artists who wander metropolitan streets at night or memories of a girlfriend who loved menswear.
 Umit’s own brand of fashion-making might be charged with a narrative aura, but it’s the the clothes that really speak by themselves, oozing a quintessential masculinity. They are sophisticated, luxurious and sturdy: the wardrobe of choice of elegant men who get their hands dirty. Refined yet raw, the Umit Benan man is authentic, powerful, full of lively contrasts. Like life."
-  )
-
-manish = Designer.create!(
-  brand:"Manish Arora",
-  first_name: "Manish",
-  last_name: "Arora",
-  email: "manish@lalala.com",
-  password: "123456",
-  profile_picture: "https://martjackstorage.blob.core.windows.net/in-resources/bdc03b70-0e3c-44d5-a4d5-68c7fad6cbd6/Images/userimages/manisharora_logo.png",
-  city: "New Delhi",
-  age: 1997,
-  detail: "Manish Arora is one of the most celebrated and inspiring contemporary designers in the fashion world today. He is known for his astute craftsmanship and unique play on colors, such as his trademark palette of pink and gold.
-It was in 1997, that the world 1st viewed Manish's design aesthetic with the launch of his label 'Manish Arora'. With this he grew from strength to strength gaining a devoted following in the fashion world, which finally led to Manish exhibiting at the London Fashion Week in 2005. In 2007, Manish showcased for the 1st time in Paris Fashion Week. He became a member of the distinguished French Federation of Pret-a-Porter in 2009
-Today, Manish sells his creations worldwide across prestigious stores such as Printemps, Joyce and Saks 5th Avenue. In 2011, Manish was appointed the Creative Director for Iconic French Fashion House 'Paco Robanne' where he designed two successful collections.
-Manish Arora has been toasted across the Fashion world with Fashion spreads in International magazines such as V Magazine, Interview, Vogue, Elle, Harpers, L'officiel. He has also collaborated with eminent brands such as Walt Disney, Swarovski, Swatch, Reebok, Barbie, Monoprix, Nespresso, Nivea, MAC Cosmetics, Pommery, and Amrapali amongst others. His rich and colorful designs have been worn by international stars such as Rihanna, Lady Gaga, MIA and Katy Perry.
-In 2014, the brand opened its 1 st flagship store in Paris. On 16th February 2016, Manish Arora was awarded the 'Chevalier de la Legion d'Honneur'."
-
   )
 
 spring_2018 = Collection.create!(

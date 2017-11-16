@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <h1>All Designers</h1>
+    </div>
+
+    <!-- For all designers -> make a designer card -->
+    <% @designers.each do |designer| %>
+    <div class="row">
+      <div class="col-xs-6 col-md-12">
+        <div class="product-image" style="background-image:url('<%= image_path designer.products.sample.picture_1 %>');"></div>
+      </div>
+      <div class="col-xs-6 col-md-12">
+        <div class="product-image" style="background-image:url('<%= image_path designer.products.sample.picture_1 %>');"></div>
+      </div>
+      </div>
+      <div class="col-xs-6 col-md-12">
+        <div class="product-image" style="background-image:url('<%= image_path designer.products.sample.picture_1 %>');"></div>
+      </div>
+      </div>
+      <div class="col-xs-6 col-md-12">
+        <div class="avatar">
+
+          <div class="brand-avatar" style="background-image:url('<%= image_path designer.profile_picture %>');">
+          </div>
+        </div>
+        <div>
+          <%= designer.brand %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+</div>
