@@ -8,6 +8,7 @@
     sizes: <%= @product.sizes %> <br>
     color: <%= @product.color %> <br>
     detail: <%= @product.detail %> <br>
+    <br>
   </div>
   <div class = "row">
     <div class="col-xs-3">
@@ -24,6 +25,9 @@
     </div>
   </div>
 
+    <br>
+    <%= link_to "Add to Collection", store_collection_store_products_path(product_id: @product.id), method: :post, class: "btn-treehouse"%>
+    <br>
 </div>
 
 
