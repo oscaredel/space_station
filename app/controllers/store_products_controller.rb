@@ -7,5 +7,6 @@ class StoreProductsController < ApplicationController
     new_store_product.product = @product
     new_store_product.store_collection = @storecollection
     new_store_product.save!
+    redirect_to retailer_path
   end
 end
