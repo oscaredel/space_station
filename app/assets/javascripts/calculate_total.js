@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-  const quantityFormInputs = document.querySelectorAll(".price-input");
+  var quantityFormInputs = document.querySelectorAll(".price-input");
   quantityFormInputs.forEach(function(input){
     input.addEventListener("change", function(event) {
       calculateRowTotal(event)
@@ -12,19 +12,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 function calculateRowTotal(event) {
-  let multiplier = Number.parseInt(event.currentTarget.value)
+  var multiplier = Number.parseInt(event.currentTarget.value)
 
-  let productPrice = Number.parseInt(document.getElementById(event.currentTarget.dataset.target + "-price").innerText, 10);
+  var productPrice = Number.parseInt(document.getElementById(event.currentTarget.dataset.target + "-price").innerText, 10);
 
-  let total = multiplier * productPrice
+  var total = multiplier * productPrice
 
   document.getElementById(event.currentTarget.dataset.target + "-total").innerHTML = total
 }
 
 function calculateTableTotal() {
-  let sum = 0;
-  document.querySelectorAll('.row-total').forEach((item) => {
-    let rowTotal = Number.parseInt(item.innerText)
+  var sum = 0;
+  document.querySelectorAll('.row-total').forEach(function(item) {
+    var rowTotal = Number.parseInt(item.innerText)
     if (!isNaN(rowTotal)) {
       sum += rowTotal
     }
