@@ -1,0 +1,29 @@
+.designercard {
+  display: flex;
+  flex-direction: column;
+  justify-items: space-around;
+  align-items: center;
+  text-align:center;
+  padding: 0px;
+  margin: 20px auto;
+}
+
+.brand-avatar {
+  height: 400px;
+  width: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  padding-bottom: 5px;
+  & :hover {
+    opacity: 90%
+  }
+}
+
+.brandname {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+

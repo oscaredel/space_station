@@ -5,12 +5,27 @@
   image: "https://loveexcellence.co.uk/sites/default/files/SPACE-CRAFT-1B-FINAL.jpg",
   banner_size: "full"
 } %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Our featured Designers</h1>
+    </div>
+  </div>
+  <div class="row">
+    <% @designers.sample(2).each do |d| %>
+    <div class="col-xs-12 col-md-6">
+      <%= render 'shared/designercard', designer: d %>
+    </div>
+    <% end %>
+  </div>
+</div>
 
-<h1>Our featured Designers</h1>
-<%= render 'shared/homepagecard' %>
-<%= render 'shared/homepagecard' %>
-<%= render 'shared/homepagecard' %>
 
+<div class="container all-btn">
+  <%= link_to designers_path do %>
+  <div class="btn btn-warning"><p>Checkout all designers</p></div>
+  <% end %>
+</div>
 <div id="map" style="width: 100%; height: 600px;"></div>
 
 <% content_for(:after_js) do %>
@@ -313,6 +328,7 @@
       "color": "#4e6d70"
     }
     ]
+>>>>>>> master
   }
   ]
 
