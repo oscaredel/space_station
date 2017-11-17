@@ -45,7 +45,8 @@ Product.create!(
   picture_3: "https://mosaic01.ztat.net/vgs/media/pdp-zoom/PO/22/2O/03/FQ/11/PO222O03F-Q11@3.jpg",
   picture_4: "https://mosaic02.ztat.net/vgs/media/pdp-zoom/PO/22/2O/03/FQ/11/PO222O03F-Q11@6.jpg",
   collection: rl_fw_2018,
-  designer: ralph
+  designer: ralph,
+  price: 30
 )
 
 Product.create!(
@@ -58,7 +59,8 @@ Product.create!(
   picture_3: "https://mosaic02.ztat.net/vgs/media/pdp-zoom/PO/22/2E/01/OK/11/PO222E01O-K11@6.jpg",
   picture_4: "https://mosaic01.ztat.net/vgs/media/pdp-zoom/PO/22/2E/01/OK/11/PO222E01O-K11@10.jpg",
   collection: rl_fw_2018,
-  designer: ralph
+  designer: ralph,
+  price: 91
 )
 
 Product.create!(
@@ -71,7 +73,8 @@ Product.create!(
   picture_3: "https://mosaic02.ztat.net/vgs/media/pdp-zoom/PO/22/2D/0B/JD/11/PO222D0BJ-D11@8.jpg",
   picture_4: "https://mosaic01.ztat.net/vgs/media/pdp-zoom/PO/22/2D/0B/JD/11/PO222D0BJ-D11@7.jpg",
   collection: rl_fw_2018,
-  designer: ralph
+  designer: ralph,
+  price: 40
 )
 
 Product.create!(
@@ -84,7 +87,8 @@ Product.create!(
   picture_3: "https://mosaic01.ztat.net/vgs/media/pdp-zoom/PO/22/1I/01/9K/14/PO221I019-K14@9.jpg",
   picture_4: "https://mosaic02.ztat.net/vgs/media/pdp-gallery/PO/22/1I/01/9K/14/PO221I019-K14@6.jpg",
   collection: rl_fw_2018,
-  designer: ralph
+  designer: ralph,
+ price: 17.6
 )
 
 Product.create!(
@@ -97,8 +101,10 @@ Product.create!(
   picture_3: "https://mosaic01.ztat.net/vgs/media/pdp-zoom/L4/25/1P/00/1O/11/L4251P001-O11@8.jpg",
   picture_4: "https://mosaic01.ztat.net/vgs/media/pdp-zoom/L4/25/1P/00/1O/11/L4251P001-O11@6.jpg",
   collection: rl_fw_2018,
-  designer: ralph
+  designer: ralph,
+  price: 314,
 )
+
 
 
 
@@ -135,7 +141,8 @@ Product.create!(
   picture_3: "https://product-images.therealreal.com/CHA167314_3_enlarged.jpg",
   picture_4: "https://product-images.therealreal.com/CHA167314_2_product.jpg",
   collection: cc_fw_2018,
-  designer: coco
+  designer: coco,
+  price: 200
 )
 
 Product.create!(
@@ -148,7 +155,8 @@ Product.create!(
   picture_3: "https://product-images.therealreal.com/CHA147774_3_enlarged.jpg",
   picture_4: "https://product-images.therealreal.com/CHA147774_4_enlarged.jpg",
   collection: cc_fw_2018,
-  designer: coco
+  designer: coco,
+  price: 809
 )
 
 Product.create!(
@@ -161,7 +169,8 @@ Product.create!(
   picture_3: "https://product-images.therealreal.com/ALE43108_3_enlarged.jpg",
   picture_4: "https://product-images.therealreal.com/ALE43108_2_enlarged.jpg",
   collection: cc_fw_2018,
-  designer: coco
+  designer: coco,
+  price: 43
 )
 
 Product.create!(
@@ -174,7 +183,8 @@ Product.create!(
   picture_3: "https://product-images.therealreal.com/CHA198791_3_enlarged.jpg",
   picture_4: "https://product-images.therealreal.com/CHA198791_1_enlarged.jpg",
   collection: cc_fw_2018,
-  designer: coco
+  designer: coco,
+  price: 60
 )
 
 Product.create!(
@@ -187,7 +197,8 @@ Product.create!(
   picture_3: "https://product-images.therealreal.com/REE28431_3_enlarged.jpg",
   picture_4: "https://product-images.therealreal.com/REE28431_2_enlarged.jpg",
   collection: cc_fw_2018,
-  designer: coco
+  designer: coco,
+  price: 70
 )
 
 
@@ -223,7 +234,8 @@ Product.create!(
   picture_3: "https://cdn.yoox.biz/34/34804056ab_14_d.jpg",
   picture_4: "https://cdn.yoox.biz/34/34804056ab_14_a.jpg",
   collection: ga_fw_2018,
-  designer: armani
+  designer: armani,
+  price: 70
 )
 
 Product.create!(
@@ -236,7 +248,8 @@ Product.create!(
   picture_3: "https://cdn.yoox.biz/46/46539889wa_14_d.jpg",
   picture_4: "https://cdn.yoox.biz/46/46539889wa_14_e.jpg",
   collection: ga_fw_2018,
-  designer: armani
+  designer: armani,
+  price: 70
 )
 
 Product.create!(
@@ -249,7 +262,9 @@ Product.create!(
   picture_3: "https://cdn.yoox.biz/46/46530977ac_14_d.jpg",
   picture_4: "https://cdn.yoox.biz/46/46530977ac_14_b.jpg",
   collection: ga_fw_2018,
-  designer: armani
+  designer: armani,
+  price: 70
+
 )
 
 Product.create!(
@@ -262,7 +277,8 @@ Product.create!(
   picture_3: "https://cdn.yoox.biz/34/34775299pf_14_d.jpg",
   picture_4: "https://cdn.yoox.biz/34/34775299pf_14_e.jpg",
   collection: ga_fw_2018,
-  designer: armani
+  designer: armani,
+  price: 70
 )
 
 Product.create!(
@@ -275,7 +291,8 @@ Product.create!(
   picture_3: "https://cdn.yoox.biz/46/46550748al_14_e.jpg",
   picture_4: "https://cdn.yoox.biz/46/46550748al_14_a.jpg",
   collection: ga_fw_2018,
-  designer: armani
+  designer: armani,
+  price: 70
 )
 
 
@@ -353,7 +370,8 @@ jac_pants = Product.create!(
   picture_3: "https://www.umitbenan.com/1674/multicolor-jacquard-tejano-bomber.jpg",
   picture_4: "https://www.umitbenan.com/1673/multicolor-jacquard-tejano-bomber.jpg",
   collection: fw_2018,
-  designer: umit
+  designer: umit,
+  price: 91
   )
 
 karate_kid_trench_two = Product.create!(
@@ -366,7 +384,8 @@ karate_kid_trench_two = Product.create!(
   picture_3: "https://www.umitbenan.com/1844/kk-trench-coat.jpg",
   picture_4: "https://www.umitbenan.com/1842/kk-trench-coat.jpg",
   collection: fw_2018,
-  designer: umit
+  designer: umit,
+  price: 91
   )
 
 karate_pants = Product.create!(
@@ -379,21 +398,23 @@ karate_pants = Product.create!(
   picture_3: "https://www.umitbenan.com/1847/kk-trench-coat.jpg",
   picture_4: "https://www.umitbenan.com/1849/kk-trench-coat.jpg",
   collection: fw_2018,
-  designer: umit
+  designer: umit,
+  price: 91
   )
 
 sc = StoreCollection.create!(
   season: "Spring",
   year: 2018,
   details: "My new collection for next year, lalala",
-  retailer: monica
+  retailer: monica,
+
   )
 
 designerorder = DesignerOrder.create!(
   total_quote: 10.203,
   order_requested: true,
   order_confirmed: false,
-  store_collection: sc
+  store_collection: sc,
   )
 
 puts "done!"
