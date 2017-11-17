@@ -12,22 +12,22 @@
   </div>
   <div class = "row">
     <div class="col-xs-3">
-      <%= image_tag @product.picture_1, class: "product-image" %>
+      <div class="product-image" style="background-image:url('<%= image_path @product.picture_1 %>');"></div>
     </div>
     <div class="col-xs-3">
-      <%= image_tag @product.picture_2, class: "product-image" %>
+      <div class="product-image" style="background-image:url('<%= image_path @product.picture_2 %>');"></div>
     </div>
     <div class="col-xs-3">
-      <%= image_tag @product.picture_3, class: "product-image" %>
+      <div class="product-image" style="background-image:url('<%= image_path @product.picture_3 %>');"></div>
     </div>
     <div class="col-xs-3">
-      <%= image_tag @product.picture_4, class: "product-image" %>
+      <div class="product-image" style="background-image:url('<%= image_path @product.picture_4 %>');"></div>
     </div>
   </div>
 
-    <br>
-    <%= link_to "Add to Collection", store_collection_store_products_path(product_id: @product.id), method: :post, class: "btn-treehouse"%>
-    <br>
+  <br>
+  <%= link_to "Add to Collection", store_collection_store_products_path(product_id: @product.id), method: :post, class: "btn-treehouse"%>
+  <br>
 </div>
 
 

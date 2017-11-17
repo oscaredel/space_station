@@ -1,4 +1,20 @@
 // Specific CSS for your home-page
-.row {
-  padding: 0px 30px;
+
+.button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+.all-btn {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.btn {
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px grey;
 }

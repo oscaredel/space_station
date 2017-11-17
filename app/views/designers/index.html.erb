@@ -1,35 +1,22 @@
+<%= render partial: 'shared/banner', locals: {
+  primary_header: "",
+  secondary_header: "",
+  image: "https://i.pinimg.com/564x/c6/9e/fc/c69efcfef51732eb4f684e4b5089f96b.jpg",
+  banner_size: "quarter"
+} %>
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-
       <h1>All Designers</h1>
     </div>
   </div>
   <!-- For all designers -> make a designer card -->
-  <% @designers.each do |designer| %>
-  <div class="row designercard">
-
-    <% products = designer.products.sample(3) %>
-    <% products.each do |product| %>
-    <div class="col-xs-6 col-md-3">
-      <%= link_to designer_product_path(designer, product) do %>
-      <div class="product-image" style="background-image:url('<%= image_path product.picture_1 %>');"></div>
-      <% end %>
+  <div class="row">
+    <% @designers.each do |d| %>
+    <div class="col-xs-12 col-md-6">
+      <%= render 'shared/designercard', designer: d %>
     </div>
     <% end %>
-
-
-    <div class="col-xs-6 col-md-3">
-      <%= link_to designer_path(designer) do %>
-      <div class="avatar">
-        <div class="brand-avatar" style="background-image:url('<%= image_path designer.profile_picture %>');">
-        </div>
-      </div>
-      <div class="brandname">
-        <%= designer.brand %>
-      </div>
-      <% end %>
-    </div>
   </div>
-  <% end %>
 </div>
