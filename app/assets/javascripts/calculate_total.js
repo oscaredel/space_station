@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 function calculateRowTotal(event) {
   let multiplier = Number.parseInt(event.currentTarget.value)
 
-  let productPrice = Number.parseInt(document.getElementById(`${event.currentTarget.dataset.target}-price`).innerText, 10);
+  let productPrice = Number.parseInt(document.getElementById(event.currentTarget.dataset.target + "-price").innerText, 10);
 
   let total = multiplier * productPrice
 
-  document.getElementById(`${event.currentTarget.dataset.target}-total`).innerHTML = total
+  document.getElementById(event.currentTarget.dataset.target + "-total").innerHTML = total
 }
 
 function calculateTableTotal() {
