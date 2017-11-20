@@ -4,6 +4,16 @@ Rails.application.routes.draw do
   # ALWAYS PUT ROOT ROUTE AT THE BEGINNING OF THE FILE
   root to: 'pages#home'
 
+  # STATIC PAGES
+  get '/buyers', to: 'pages#buyers'
+  get '/designers/info', to: 'pages#designers', as: 'designers_info'
+  get '/faq', to: 'pages#faq'
+  get '/live_chat', to: 'pages#live_chat'
+  get '/about', to: 'pages#about'
+
+
+
+
   # devise_for :retailers
 
   get 'contact', to: 'pages#contact'

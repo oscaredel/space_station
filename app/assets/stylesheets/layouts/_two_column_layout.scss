@@ -1,0 +1,54 @@
+.two-column-layout-container {
+  display: flex;
+  justify-content: space-between;
+  .sidebar {
+    flex: 0 0 25%;
+    background-color: white;
+    padding: 20px;
+    .bio-box {
+      .brand {
+        font-size: 20px;
+        color: gray;
+        font-style: italic;
+        margin-bottom: 5px;
+      }
+      .city {
+        font-weight: 800;
+      }
+    }
+    .bio-image {
+      width: 150px;
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      margin: 0 auto;
+    }
+    .description {
+      margin-top: 10px;
+    }
+    ul {
+      li {
+
+      }
+    }
+
+  }
+  .content {
+    flex: 1 0 70%;
+    padding: 0 50px;
+    h2 {
+
+    }
+    p {
+
+    }
+
+    .cards-container {
+      width: 80%;
+    }
+  }
+}
+.long-text {
+  font-size: 15px;
+  line-height: 1.5;
+}

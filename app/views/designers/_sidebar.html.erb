@@ -1,0 +1,89 @@
+<div class="first-section">
+
+  <h2>
+    <%=@designer.first_name %> <%= @designer.last_name %>
+  </h2>
+  <ul class="list-unstyled bio-box">
+    <li class="brand">
+      <%= @designer.brand %>
+   </li>
+   <li>
+     <span class="city"><%= @designer.city %></span> - <span class="year"><%= @designer.age %></span>
+   </li>
+  <li class="description">
+    <p class="long-text">
+      <%= truncate @designer.detail, length: 150 %>
+    </p>
+  </li>
+</ul>
+
+  <div class="bio-image" style="background-image:url('<%= image_path @designer.profile_picture %>');">
+  </div>
+
+
+</div>
+
+<div class="second-section">
+  <h3>
+    Collections
+  </h3>
+  <ul>
+     <% @designer.collections.each do |collection| %>
+      <li>
+        <%= collection.season %>
+        <%= collection.year %>
+        <%= collection.detail %>
+      </li>
+    <% end %>
+  </ul>
+
+
+  <h3>
+    Products
+  </h3>
+  <ul>
+    <li>
+     Jackets
+    </li>
+    <li>
+      Suits
+    </li>
+    <li>
+      Sweaters
+    </li>
+    <li>knitwear</li>
+    <li>shirts</li>
+    <li>t-shirts</li>
+    <li>trousers</li>
+    <li>sneakers</li>
+    <li>shoes</li>
+    <li>bags</li>
+    <li>hats</li>
+    <li>accessories</li>
+  </ul>
+
+  <h3>
+    Parameters
+  </h3>
+  <ul>
+    <li>
+      Style:
+    </li>
+    <li>
+      Main products:
+    </li>
+    <li>
+      Price range:
+    </li>
+      <li>
+      Favorite Material:
+    </li>
+    <li>
+      Logistic method:
+    </li>
+      <li>
+      MOQ:
+    </li>
+
+  </ul>
+</div>

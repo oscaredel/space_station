@@ -1,75 +1,8 @@
-<!-- Info about designer -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="bio-card">
-       <div class="bio-image" style="background-image:url('<%= image_path @designer.profile_picture %>');"></div>
-       <h2>
-        <%=@designer.first_name %> <%= @designer.last_name %>
-      </h2>
-      <ul>
-        <li>
-         <span> email:</span> <%= @designer.email %>
-       </li>
-       <li>
-        <span>city:</span> <%= @designer.city %>
-      </li>
-      <li>
-        <span>age:</span> <%= @designer.age %>
-      </li>
-      <li>
-        <span>About me:</span> <%= @designer.detail %>
-      </li>
-    </ul>
-    <a href="#" class="btn-treehouse">Contact</a>
+<div class="two-column-layout-container">
+  <div class="sidebar">
+<%= render partial: 'sidebar' %>
+  </div>
+  <div class="content">
+<%= render partial: 'content' %>
   </div>
 </div>
-
-<!-- Looks and Products of designer -->
-<div class="col-md-8">
-  <h1>Current collection: </h1>
-  <div class="products">
-      <div class="row">
-        <% @designer.products.each do |product| %>
-          <div class="col-xs-12">
-            <div class="product-card">
-              <div class="product-image">
-                <%= link_to designer_product_path(@designer, product) do %>
-                    <%= image_tag product.picture_1, height: 200, width: 200, crop: :fill %>
-                <% end %>
-              </div>
-              <div class="product-details">
-                <p><%= product.name %></p>
-                <p><%= product.detail %></p>
-              </div>
-            </div>
-          </div>
-        <% end %>
-      </div>
-    </ul>
-  </div>
-
-</div>
-
-
-
-<!-- <div class="main-container"> (diplay"flex)
-  <div class="sidebar"> width=43242 -->
-
-
-
-  </div>
-  <div class="card-container">
-    <div class="row">
-
-      </div>
-      <div class="col-md-6">
-
-      </div>
-
-    </div>
-
-
-  </div>
-</div>
-
