@@ -323,6 +323,29 @@ fw_2018 = Collection.create!(
   designer: umit
   )
 
+ss_2018 = Collection.create!(
+  season: "Fall",
+  year: 2018,
+  detail: "i once loved a woman who loves menswear fw 2018",
+  designer: umit
+  )
+
+sum_18_2 = Collection.create!(
+  season: "Summer 2",
+  year: 2018,
+  detail: "inspired by heat and sweat",
+  designer: umit
+  )
+
+sum_18_1 = Collection.create!(
+  season: "Summer 1",
+  year: 2018,
+  detail: "she loved freedom so I did too",
+  designer: umit
+  )
+
+
+
 
 monica = Retailer.create!(
   first_name: "Monica",

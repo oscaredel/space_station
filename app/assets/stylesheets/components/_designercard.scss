@@ -9,15 +9,15 @@
 }
 
 .brand-avatar {
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 5px;
   padding-bottom: 5px;
   & :hover {
-    opacity: 90%
+    opacity: 50%
   }
 }
 

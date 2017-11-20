@@ -3,14 +3,23 @@
   justify-content: space-between;
   padding: 10px 60px;
   align-items: center;
-  background-color: #020c13;
+  position: absolute;
   left: 0;
   right: 0;
   .navbar-group-left {
+    .avatar {
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      border-radius: 50%;
+      background-position: center;
+    }
     flex: 0 0 40%;
-    ul {
+    .flex-inline {
+      display: flex;
+      align-items: center;
       li {
-        padding: 0 20px;
+        padding: 0 10px;
       }
     }
   }
@@ -28,14 +37,9 @@
   flex: 0 0 40%;
   display: flex;
   justify-content: flex-end;
-  .avatar {
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    border-radius: 50%;
-    background-position: center;
-  }
+
 }
+
 .space-station-navbar-link {
   color: white;
   transition: color 200ms ease;

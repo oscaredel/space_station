@@ -12,11 +12,26 @@ class PagesController < ApplicationController
       <br> <h4 class='marker-text'>#{designer.first_name} #{designer.last_name}</h4> </a>
       </div>"
       marker.picture({
-        url: "#{view_context.image_path 'rocket.png'}",
+        url: "#{view_context.image_path 'minigaia_small.png'}",
         width: 32,
         height: 32
         })
 
     end
+  end
+
+  def buyers
+  end
+
+  def designers
+  end
+
+  def about
+  end
+
+  def faq
+  end
+
+  def live_chat
   end
 end

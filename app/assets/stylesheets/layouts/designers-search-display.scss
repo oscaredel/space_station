@@ -1,0 +1,17 @@
+.designers-search-display {
+  display: flex;
+  justify-content: space-between;
+
+  .search_col_container{
+    flex: 0 0 25%;
+    background-color: white;
+    padding: 20px;
+
+  }
+
+  .designer-container{
+     flex: 1 0 70%;
+    padding: 0 50px;
+
+  }
+}
