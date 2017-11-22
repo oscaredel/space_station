@@ -1,4 +1,11 @@
 .devise-form {
+  display: block;
+  text-align:center;
+  background-color: $misty-rose;
+  padding: 30px;
   max-width: 400px;
-    margin: 20px auto;
+  margin: 20px auto;
+  border: medium solid white;
+  color: #ccc;
 }
+

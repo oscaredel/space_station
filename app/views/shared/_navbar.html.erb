@@ -28,14 +28,21 @@
         </div>
       </li>
       <li>
-        <%= link_to "Invitations", "#", class: "space-station-navbar-link"  %>
+        <%= link_to "Invitations", class: "space-station-navbar-link" do %>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <% end %>
       </li>
       <li>
-        <%= link_to "Messages", "#", class: "space-station-navbar-link"  %>
+        <%= link_to "Messages", class: "space-station-navbar-link" do %>
+        <i class="fa fa-comments" aria-hidden="false"></i>
+        <% end %>
       </li>
       <li>
-        <%= link_to "Notifs", "#", class: "space-station-navbar-link"  %>
+        <%= link_to "Notifs", class: "space-station-navbar-link" do %>
+        <i class="fa fa-flag" aria-hidden="true"></i>
+        <% end %>
       </li>
+
     </ul>
     <% else %>
     <ul class="list-inline">

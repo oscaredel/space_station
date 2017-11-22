@@ -34,6 +34,11 @@
 
   }
   .content {
+
+    .collection-header{
+      border-bottom: 1px solid rgba(1,1,1,.3);
+    }
+
     flex: 1 0 70%;
     padding: 0 50px;
     h2 {
@@ -43,12 +48,9 @@
 
     }
 
-    .cards-container {
-      width: 80%;
-    }
+
   }
 }
 .long-text {
-  font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.314;
 }

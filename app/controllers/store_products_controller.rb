@@ -7,7 +7,11 @@ class StoreProductsController < ApplicationController
       new_store_product = StoreProduct.new
       new_store_product.product = @product
       new_store_product.store_collection = @storecollection
-      new_store_product.save!
+      if StoreProduct.pluck(:product_id).include?(@product.id)
+        flash[:notice] = "You can't add the same product twice, you dumbo!"
+      else
+        new_store_product.save!
+      end
       redirect_to retailer_path
     else
       flash[:notice] = "You are not logged in"

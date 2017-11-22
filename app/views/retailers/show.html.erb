@@ -17,10 +17,10 @@
           <thead>
             <tr>
               <th>
-                Product
+
               </th>
               <th>
-                sizes
+                name
               </th>
               <th>
                 Detail
@@ -43,7 +43,7 @@
             <% store_products.each do |store_product| %>
             <form class="js-quantity-form" data-product-price="<%= store_product.product.price %>" data-product-id="<%= store_product.product.id %>">
 
-              <tr class="product-card" data-target="<%= store_product.product.id %>">
+              <tr data-target="<%= store_product.product.id %>">
                 <td id= "prod-thumb">
                   <%= image_tag store_product.product.picture_1, height: 100, width: 100, crop: :fill %>
                 </td>
@@ -59,7 +59,10 @@
                   </span>
                 </td>
                 <td>
-                  <input id="js-product-quantity" type="number" class="price-input" data-target="<%= store_product.product.id %>">
+                  <div class="form-group">
+                  <label for="js-product-quantity-<%= store_product.product.id %>">Quantity</label>
+                  <input id="js-product-quantity-<%= store_product.product.id %>" type="number" class="price-input form-control" data-target="<%= store_product.product.id %>">
+                  </div>
                 </td>
                 <td>
                   $ <span id="<%= store_product.product.id %>-total" class="row-total"> </span>
@@ -88,7 +91,7 @@
 </div>
 
 
-
+</div>
 
 
 

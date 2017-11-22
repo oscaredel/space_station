@@ -1,9 +1,19 @@
-<div class="designercard"</div>
+<div class="designercard">
   <%= link_to designer_path(designer) do %>
-  <div class="brand-avatar" style="background-image:url('<%= image_path designer.profile_picture %>');">
+  <div class="card-back">
+    <div class="card-back-image" style="background-image:url('<%= image_path designer.collections.last.products.first.picture_1 %>');"></div>
   </div>
-  <div class="brandname">
-    <%= designer.brand %>
+  <div class="brand-content">
+    <div class="brand-avatar" style="background-image:url('<%= image_path designer.profile_picture %>');">
+    </div>
+    <div class="brandname">
+      <%= designer.brand %>
+    </div>
   </div>
-<% end %>
+  <div class="collection-photos">
+    <% designer.collections.last.products.first(4).each do |product| %>
+    <%= image_tag product.picture_1, width: 50 %>
+    <% end %>
+  </div>
+  <% end %>
 </div>

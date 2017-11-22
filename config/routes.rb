@@ -19,6 +19,10 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
   get 'about', to: 'pages#about'
 
+  resources :collections, only: [:show]
+
+  resources :categories, only: [ :show ]
+
   resources :designers, only: [:show, :index] do
     resources :looks, only: [:show]
     resources :products, only: [:show]

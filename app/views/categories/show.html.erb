@@ -1,0 +1,14 @@
+<center>
+  <h3> <%= @category.title %> </h3>
+</center>
+
+
+<div class="row">
+    <% @category.designers.each do |d| %>
+    <div class="col-xs-12 col-md-6">
+      <%= render 'shared/designercard', designer: d %>
+    </div>
+    <% end %>
+  </div>
+
+<!-- Designer.where {designer.categories.includes? { category.title == 'Menswear' }} -->

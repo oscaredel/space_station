@@ -1,4 +1,4 @@
-<div class="first-section">
+  <div class="first-section">
 
   <h2>
     <%=@designer.first_name %> <%= @designer.last_name %>
@@ -30,9 +30,7 @@
   <ul>
      <% @designer.collections.each do |collection| %>
       <li>
-        <%= collection.season %>
-        <%= collection.year %>
-        <%= collection.detail %>
+        <%= link_to "#{collection.season} #{collection.year}", collection_path(collection), remote: true  %>
       </li>
     <% end %>
   </ul>
@@ -62,28 +60,35 @@
     <li>accessories</li>
   </ul>
 
+  <h3> Categories </h3>
+  <ul>
+    <% @designer.categories.each do |category|  %>
+    <li>
+      <%= link_to category.title, category_path(category)  %>
+    </li>
+    <% end %>
+  </ul>
+
   <h3>
-    Parameters
+    Preferences
   </h3>
   <ul>
     <li>
       Style:
     </li>
-    <li>
-      Main products:
-    </li>
+
     <li>
       Price range:
     </li>
-      <li>
-      Favorite Material:
-    </li>
     <li>
-      Logistic method:
+      Logistic preferences: F.O.B
     </li>
       <li>
-      MOQ:
+      MOQ/P : $2000
     </li>
-
   </ul>
+
+<input type="submit" value="Connect" class="btn-space-station">
+
 </div>
+
