@@ -30,6 +30,6 @@ Rails.application.routes.draw do
 
   resource :retailer, only: [:show, :edit, :update, :index]
   resource :store_collection, only: [:show, :new, :create, :edit, :update] do
-    resources :store_products, only: [:create]
+    resources :store_products, only: [:create, :destroy]
   end
 end

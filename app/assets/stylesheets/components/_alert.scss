@@ -5,7 +5,7 @@
 .alert {
   margin: 0;
   text-align: center;
-  color: white;
+  color: black;
   border: none;
   position: absolute;
   top: 0;
@@ -14,7 +14,7 @@
   z-index: 9999;
 }
 .alert-info {
-  background: $green;
+  background: $floral-white;
 }
 .alert-warning {
   background: $red;

@@ -4,6 +4,7 @@ class RetailersController < ApplicationController
     @store_products_grouped_by_designer = @retailer.store_collection.store_products.group_by do |store_product|
       store_product.product.designer
     end
+    session[:previous_page] = "retailers#show"
   end
 
   def index

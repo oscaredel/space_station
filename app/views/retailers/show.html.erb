@@ -6,14 +6,14 @@
 <div class="container">
   <div class="designer-wishlist-table">
     <h2 class="text-center">
-      Store Wishlist for <%= @retailer.store_collection.season %> <%= @retailer.store_collection.year %>
+      Plan for <%= @retailer.store_collection.season %> <%= @retailer.store_collection.year %>
     </h2>
     <div class="designer-wishlist-table">
       <% @store_products_grouped_by_designer.each do |designer, store_products| %>
       <div class="row">
         <h3><%= designer.brand %></h3>
 
-        <table>
+        <table class="wishlist">
           <thead>
             <tr>
               <th>
@@ -41,11 +41,11 @@
 
           <tbody>
             <% store_products.each do |store_product| %>
-            <form class="js-quantity-form" data-product-price="<%= store_product.product.price %>" data-product-id="<%= store_product.product.id %>">
+            <div class="js-quantity-form" data-product-price="<%= store_product.product.price %>" data-product-id="<%= store_product.product.id %>">
 
               <tr data-target="<%= store_product.product.id %>">
-                <td id= "prod-thumb">
-                  <%= image_tag store_product.product.picture_1, height: 100, width: 100, crop: :fill %>
+                <td class="prod-thumb" style="background-image:url('<%= image_path store_product.product.picture_1 %>');">
+
                 </td>
                 <td id= "prod-name">
                   <p><%= store_product.product.name %></p>
@@ -59,24 +59,43 @@
                   </span>
                 </td>
                 <td>
-                  <div class="form-group">
-                  <label for="js-product-quantity-<%= store_product.product.id %>">Quantity</label>
-                  <input id="js-product-quantity-<%= store_product.product.id %>" type="number" class="price-input form-control" data-target="<%= store_product.product.id %>">
+                  <div class="form-box">
+                    <% store_product.product.sizes.split(",").each do |s| %>
+                    <div class="form-group">
+                      <label for="js-product-quantity-<%= store_product.product.id %>"> <%=s%>
+                      </label>
+                      <input id="js-product-quantity-<%= store_product.product.id %>" type="number" class="price-input form-control" data-target="<%= store_product.product.id %>" placeholder="10">
+                    </div>
+                    <% end %>
                   </div>
                 </td>
                 <td>
                   $ <span id="<%= store_product.product.id %>-total" class="row-total"> </span>
                 </td>
                 <td>
-                  <input type="submit" value="Add to purchase order" class="btn-space-station">
+                  <!-- <input type="submit" value= "Remove" class="btn-space-station"> -->
+                  <%= simple_form_for :product, url: store_collection_store_product_path(store_product.product), method: :delete do |f| %>
+                  <%= f.submit "Remove", class: "btn-space-station" %>
+                  <% end %>
                 </td>
               </tr>
-            </form>
+            </div>
           </div>
         </div>
         <!-- <h3 sclass="<%= store_product.product.id %>-accumulative-total-brand">...</h3> -->
         <% end %>
       </tbody>
+      <tfoot class = "tfoot">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td> Total Pieces</td>
+        <td>$ total</td>
+        <td>
+          <input type="submit" value= "--- Place Order ---" class="btn-space-station">
+        </td>
+      </tfoot>
     </table>
   </div>
   <% end %>
@@ -87,7 +106,7 @@
 
     </span>
   </h2>
-  </div>
+</div>
 </div>
 
 

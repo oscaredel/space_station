@@ -1,62 +1,18 @@
-<div class="container">
-  <div class="product-header">
-    <h1 class="text-center"><%= @product.designer.brand%></h1>
-    <h2> <%= @product.name %> </h2>
+<div class="container padded-container">
+  <div class="row">
+    <div class="col-xs-6">
+      <div id="highlight" class="product-highlight-picture" style="background-image:url('<%= image_path @product.picture_1 %>');">
 
-    collection: <%= @product.collection.detail %> <br>
-    available in sizes: <%= @product.sizes %> <br>
-    color: <%= @product.color %> <br>
-    detail: <%= @product.detail %> <br>
-    <br>
-  </div>
-  <div class = "row">
-
-      <% unless @product.picture_1.blank? %>
-      <div class="col-xs-12 col-lg-4">
-
-        <div class="product-card">
-          <div class="product-image" style="background-image:url('<%= image_url @product.picture_1, crop: :fill %>');"></div>
-        </div>
       </div>
-      <% end %>
-
-        <% unless @product.picture_2.blank? %>
-        <div class="col-xs-12 col-lg-4">
-
-          <div class="product-card">
-            <div class="product-image" style="background-image:url('<%= image_url @product.picture_2, crop: :fill %>');"></div>
-          </div>
-
-        </div>
-        <% end %>
-
-
-        <% unless @product.picture_3.blank? %>
-        <div class="col-xs-12 col-lg-4">
-
-          <div class="product-card">
-            <div class="product-image" style="background-image:url('<%= image_url @product.picture_3, crop: :fill %>');"></div>
-          </div>
-        </div>
-        <% end %>
-
-
-        <% unless @product.picture_4.blank? %>
-        <div class="col-xs-12 col-lg-4">
-
-          <div class="product-card">
-            <div class="product-image" style="background-image:url('<%= image_url @product.picture_4, crop: :fill %>');"></div>
-          </div>
-
-        </div>
-        <% end %>
-
+    </div>
+    <div class="col-xs-6">
+      <div class="product-header">
+        <%= render partial: 'product_information', locals: { product: @product} %>
+      </div>
+      <div class="row">
+        <%= render partial: "product_pictures", locals: { product: @product } %>
+      </div>
     </div>
   </div>
-
-  <br>
-  <%= link_to "Add to Collection", store_collection_store_products_path(product_id: @product.id), method: :post, class: "btn-space-station"%>
-  <br>
 </div>
-
 

@@ -1,0 +1,21 @@
+<%= link_to designer_product_path(collection.designer, product) do %>
+  <div class="product-card product-card-high">
+    <div class="product-image product-image-tall" style="background-image:url('<%= image_url product.picture_1, crop: :fill %>');"></div>
+    <div class="product-details">
+      <p>
+        <strong>
+          <%=product.name%>
+        </strong>
+        <%= truncate product.detail, length: 100%>
+      </p>
+      <div class="product-footer">
+        <div class="price">
+          $<%= product.price %>
+        </div>
+        <div class="rrp">
+          RRP: $<%= product.price*2 %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
