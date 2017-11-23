@@ -4,13 +4,22 @@
 // Define fonts for body and headers
 $body-font: "Slabo", "Helvetica", "sans-serif";
 $headers-font: "Roboto", "Helvetica", "sans-serif";
+$goth-font: "Gotham-Rounded";
 
 // To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
+ @font-face {
+   font-family: "Gotham-Rounded";
+     src: font-url('GothamRounded-Bold.otf');
+     src: font-url('GothamRounded-Medium.otf');
+     src: font-url('GothamRounded-Light.otf');
+     src: font-url('GothamRounded-LightItalic.otf');
+     src: font-url('GothamRounded-BookItalic.otf');
+     src: font-url('GothamRounded-MediumItalic.otf');
+     src: font-url('GothamRounded-Book.otf');
 //   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
 //        font-url('FontFile.woff') format('woff'),
 //        font-url('FontFile.ttf') format('truetype')
-// }
+ }
 // $my-font: "Font Name";
+
+

@@ -1,0 +1,14 @@
+<h5>
+  <em>
+    <%= collection.detail.capitalize %>
+  </em>
+</h5>
+<div class="products-grid">
+  <div class="row">
+    <% collection.products.each do |product| %>
+      <div class="col-xs-12 col-lg-4">
+        <%= render partial: "shared/product_card", locals: { product: product, collection: collection } %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<% unless @product.picture_1.blank? %>
+<div class="col-xs-12 col-lg-4">
+
+  <div class="product-card">
+    <div class="product-image product-image-small" data-target="<%= image_path @product.picture_1 %>" style="background-image:url('<%= image_url @product.picture_1, crop: :fill %>');"></div>
+  </div>
+</div>
+<% end %>
+
+  <% unless @product.picture_2.blank? %>
+  <div class="col-xs-12 col-lg-4">
+
+    <div class="product-card">
+      <div class="product-image product-image-small" data-target="<%= image_path @product.picture_2 %>" style="background-image:url('<%= image_url @product.picture_2, crop: :fill %>');"></div>
+    </div>
+
+  </div>
+  <% end %>
+
+
+  <% unless @product.picture_3.blank? %>
+  <div class="col-xs-12 col-lg-4">
+
+    <div class="product-card">
+      <div class="product-image product-image-small" data-target="<%= image_path @product.picture_3 %>" style="background-image:url('<%= image_url @product.picture_3, crop: :fill %>');"></div>
+    </div>
+  </div>
+  <% end %>
+
+
+  <% unless @product.picture_4.blank? %>
+  <div class="col-xs-12 col-lg-4">
+
+    <div class="product-card">
+      <div class="product-image product-image-small" data-target="<%= image_path @product.picture_4 %>" style="background-image:url('<%= image_url @product.picture_4, crop: :fill %>');"></div>
+    </div>
+
+  </div>
+  <% end %>

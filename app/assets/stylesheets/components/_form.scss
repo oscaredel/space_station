@@ -1,4 +1,32 @@
 .devise-form {
+  display: block;
+  text-align:center;
+  background-color: $misty-rose;
+  padding: 30px;
   max-width: 400px;
-    margin: 20px auto;
+  margin: 20px auto;
+  border: medium solid white;
+  color: #ccc;
 }
+
+// .from-group {
+//   display:flex;
+// horizonta
+
+
+.form-box{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 2px;
+}
+
+// }
+
+
+
+.price-input {
+  width: 40px;
+  padding: 0;
+  padding-left: 5px;
+}
+

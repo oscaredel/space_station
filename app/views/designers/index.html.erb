@@ -2,6 +2,7 @@
 <div class= "designers-search-display">
 
 <div class = "search_col_container">
+   <h3>Regions</h3>
   <ul>
     <li>Africa</li>
     <li>Asia</li>
@@ -12,13 +13,37 @@
     <li>Europe</li>
     <li>Oceania</li>
   </ul>
+
+  <h3>Categories</h3>
+  <ul>
+    <% Category.all.each do |category| %>
+      <li> <%= link_to category.title, category_path(category)  %> </li>
+    <% end %>
+  </ul>
+
+
+
+    <h3>Styles</h3>
+  <ul>
+    <li>Bohemian</li>
+    <li>Dandy</li>
+    <li>Minimalist</li>
+    <li>Smart</li>
+    <li>Casual/Street</li>
+    <li>Couture</li>
+    <li>Vintage</li>
+    <li>Preppy</li>
+    <li>Androgynous</li>
+  </ul>
 </div>
 
 
 <div class="designer-container">
   <div class="row">
     <div class="col-xs-12">
+      <center>
       <h1>All Designers</h1>
+    </center>
     </div>
   </div>
   <!-- For all designers -> make a designer card -->

@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171117092148) do
+ActiveRecord::Schema.define(version: 20171122112205) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories_designers", id: false, force: :cascade do |t|
+    t.bigint "category_id", null: false
+    t.bigint "designer_id", null: false
+    t.index ["category_id", "designer_id"], name: "index_categories_designers_on_category_id_and_designer_id"
+    t.index ["designer_id", "category_id"], name: "index_categories_designers_on_designer_id_and_category_id"
+  end
 
   create_table "collections", force: :cascade do |t|
     t.string "season"
@@ -23,6 +36,15 @@ ActiveRecord::Schema.define(version: 20171117092148) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["designer_id"], name: "index_collections_on_designer_id"
+  end
+
+  create_table "designer_categories", force: :cascade do |t|
+    t.bigint "category_id"
+    t.bigint "designer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_designer_categories_on_category_id"
+    t.index ["designer_id"], name: "index_designer_categories_on_designer_id"
   end
 
   create_table "designer_orders", force: :cascade do |t|
@@ -163,6 +185,8 @@ ActiveRecord::Schema.define(version: 20171117092148) do
   end
 
   add_foreign_key "collections", "designers"
+  add_foreign_key "designer_categories", "categories"
+  add_foreign_key "designer_categories", "designers"
   add_foreign_key "designer_orders", "store_collections"
   add_foreign_key "look_products", "looks"
   add_foreign_key "look_products", "products"

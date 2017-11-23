@@ -19,6 +19,10 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
   get 'about', to: 'pages#about'
 
+  resources :collections, only: [:show]
+
+  resources :categories, only: [ :show ]
+
   resources :designers, only: [:show, :index] do
     resources :looks, only: [:show]
     resources :products, only: [:show]
@@ -26,6 +30,6 @@ Rails.application.routes.draw do
 
   resource :retailer, only: [:show, :edit, :update, :index]
   resource :store_collection, only: [:show, :new, :create, :edit, :update] do
-    resources :store_products, only: [:create]
+    resources :store_products, only: [:create, :destroy]
   end
 end
