@@ -1,8 +1,11 @@
 
+
 <div class= "designers-search-display">
 
-<div class = "search_col_container">
-   <h3>Regions</h3>
+<div class = "search-col-container">
+  <center>
+   <h4>Regions</h4>
+ </center>
   <ul>
     <li>Africa</li>
     <li>Asia</li>
@@ -14,16 +17,20 @@
     <li>Oceania</li>
   </ul>
 
-  <h3>Categories</h3>
+<center>
+  <h4>Categories</h4>
+</center>
   <ul>
     <% Category.all.each do |category| %>
       <li> <%= link_to category.title, category_path(category)  %> </li>
     <% end %>
   </ul>
+</center>
 
 
-
-    <h3>Styles</h3>
+<center>
+    <h4>Styles</h4>
+  </center>
   <ul>
     <li>Bohemian</li>
     <li>Dandy</li>

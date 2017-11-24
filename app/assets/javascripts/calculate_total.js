@@ -1,52 +1,54 @@
-// document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function(event) {
 
-//   var quantityFormInputs = document.querySelectorAll(".price-input");
-//   quantityFormInputs.forEach(function(input){
-//     input.addEventListener("change", function(event) {
-//       calculateRowTotal(event)
-//       // calculateBrandTotal()
-//       calculateTableTotal()
-//     })
-//   });
+  var quantityFormInputs = document.querySelectorAll(".price-input");
 
-// });
+  quantityFormInputs.forEach(function(input){
+    input.addEventListener("change", function(event) {
+      if (input.value < 0) {
+        input.value = 0;
+      }
+      calculateRowTotal(event, this)
+      calculateTableTotal(event, this)
+      calculateGrandTotal()
+    })
+  });
 
-// function calculateRowTotal(event) {
-//   var sum = 0;
-//   document.querySelectorAll('.price-input').forEach(function(item) {
-//     var productTotal=Number.parseInt(item.innerText)
-//     if (!isNan(productTotal)) {
-//       sum += productTotal
-//     }
-//     }
-//   var multiplier = productTotal
+});
 
-//   var productPrice = Number.parseInt(document.getElementById(event.currentTarget.dataset.target + "-price").innerText, 10);
+function calculateRowTotal(event, input) {
+  var currentProductId = input.dataset.target
+  var productPrice = Number(document.getElementById(event.currentTarget.dataset.target + "-price").innerText)
 
-//   var total = multiplier * productPrice
 
-//   document.getElementById(event.currentTarget.dataset.target + "-total").innerHTML = total
-// }
+  var allSizeInputs = input.parentNode.parentNode.querySelectorAll('input#js-product-quantity-' + currentProductId)
+  var totalQuantity = 0;
+  allSizeInputs.forEach(function(inp) {
+    totalQuantity += Number(inp.value)
+  })
 
-// function calculateTableTotal() {
-//   var sum = 0;
-//   document.querySelectorAll('.row-total').forEach(function(item) {
-//     var rowTotal = Number.parseInt(item.innerText)
-//     if (!isNaN(rowTotal)) {
-//       sum += rowTotal
-//     }
-//     document.getElementById('accumulative-total').innerText = sum
-//   })
-// }
+  var totalDisplay = document.getElementById(event.currentTarget.dataset.target + "-total")
+  totalDisplay.innerHTML = totalQuantity * productPrice
+}
 
-// function calculateBrandTotal() {
-//   let sum = 0;
-//   document.querySelectorAll('.product-card').forEach((item) => {
-//       let rowTotal = Number.parseInt(document.getElementById(`${item.dataset.target}-total`))
-//       if (!isNaN(rowTotal)) {
-//         sum += rowTotal
-//       }
-//       document.querySelectorAll(".accumulative-total-brand").innerText = sum
-//   })
-// }
+function calculateGrandTotal() {
+  var sum = 0;
+  document.querySelectorAll('.row-total').forEach(function(item) {
+    var rowTotal = Number.parseInt(item.innerText)
+    if (!isNaN(rowTotal)) {
+      sum += rowTotal
+    }
+    document.getElementById('accumulative-total').innerText = sum
+  })
+}
+
+function calculateTableTotal(event, input) {
+  var table = input.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode // 6 levels up
+  console.log(table)
+  var sum = 0;
+
+  table.querySelectorAll('.row-total').forEach(function(total) {
+      sum += Number(total.innerText)
+      table.querySelector(".table-total").innerText = sum
+  })
+}
 

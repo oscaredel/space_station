@@ -1,11 +1,11 @@
   <div class="first-section">
 
   <h2>
-    <%=@designer.first_name %> <%= @designer.last_name %>
+    <%=@designer.brand %>
   </h2>
   <ul class="list-unstyled bio-box">
     <li class="brand">
-      <%= @designer.brand %>
+      <%= @designer.first_name%> <%= @designer.last_name %>
    </li>
    <li>
      <span class="city"><%= @designer.city %></span> - <span class="year"><%= @designer.age %></span>
@@ -23,10 +23,17 @@
 
 </div>
 
+<em>
+<p> <strong>Tags:</strong> <% @designer.categories.each do |category|  %>
+  <%= link_to category.title, category_path(category)%>
+  <% end %>
+</p>
+</em>
+
 <div class="second-section">
-  <h3>
-    Collections
-  </h3>
+  <h4>
+    collections
+  </h4>
   <ul>
      <% @designer.collections.each do |collection| %>
       <li>
@@ -36,9 +43,25 @@
   </ul>
 
 
-  <h3>
-    Products
-  </h3>
+  <h4>
+    preferences
+  </h4>
+  <ul>
+
+    <li>
+      Price Level: $$
+    </li>
+    <li>
+      Logistic preferences: F.O.B
+    </li>
+      <li>
+      MOQ: $3000
+    </li>
+  </ul>
+
+  <h4>
+    products
+  </h4>
   <ul>
     <li>
      Jackets
@@ -60,35 +83,9 @@
     <li>accessories</li>
   </ul>
 
-  <h3> Categories </h3>
-  <ul>
-    <% @designer.categories.each do |category|  %>
-    <li>
-      <%= link_to category.title, category_path(category)  %>
-    </li>
-    <% end %>
-  </ul>
-
-  <h3>
-    Preferences
-  </h3>
-  <ul>
-    <li>
-      Style:
-    </li>
-
-    <li>
-      Price range:
-    </li>
-    <li>
-      Logistic preferences: F.O.B
-    </li>
-      <li>
-      MOQ/P : $2000
-    </li>
-  </ul>
-
-<input type="submit" value="Connect" class="btn-space-station">
+  <center>
+    <input  id="connect-btn" type="submit" value="Connect" class="btn-space-station">
+  </center>
 
 </div>
 

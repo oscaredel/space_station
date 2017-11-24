@@ -19,6 +19,7 @@ Category.create!(
   [
     {title: "Womenswear"},
     {title: "Menswear"},
+    {title: "Outerwear"},
     {title: "Footwear"},
     {title: "Active"},
     {title: "Hats"},

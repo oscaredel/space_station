@@ -1,12 +1,18 @@
 .devise-form {
   display: block;
   text-align:center;
-  background-color: $misty-rose;
+  background-color: white;
   padding: 30px;
   max-width: 400px;
   margin: 20px auto;
-  border: medium solid white;
-  color: #ccc;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 2px 2px 4px rgba(1,1,1,0.3);
+  text-align: center;
+  .btn-space-station {
+    margin: 0;
+    margin-bottom: 20px;
+  }
 }
 
 // .from-group {

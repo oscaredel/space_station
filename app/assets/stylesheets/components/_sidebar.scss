@@ -1,6 +1,16 @@
 .sidebar {
   border: thin solid rgba(1,1,1,0.3);
-  width:300px;
+  width:234px;
+
+  h4 { text-align:center;
+       border-bottom: thin solid rgba(1,1,1,0.3);
+       border-top: thin solid rgba(1,1,1,0.3);
+
+  }
+
+  #connect-btn {
+    margin-top:20px;
+  }
 }
 
  .first-section {

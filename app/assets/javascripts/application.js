@@ -17,3 +17,4 @@ thumbnails.forEach(function(thumbnail){
     highlight.style.cssText = "background-image:url(" + target + ")";
   })
 })
+
