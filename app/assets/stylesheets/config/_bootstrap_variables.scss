@@ -23,3 +23,14 @@ $border-radius-large: 2px;
 $border-radius-small: 2px;
 
 // Override other variables below!
+
+.regular-text {
+  color: $space-orange;
+  font-weight: bolder;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  &:hover {
+  text-decoration: underline;
+  }
+}

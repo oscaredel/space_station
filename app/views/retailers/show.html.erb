@@ -75,7 +75,7 @@
                 <td>
                   <!-- <input type="submit" value= "Remove" class="btn-space-station"> -->
                   <%= simple_form_for :product, url: store_collection_store_product_path(store_product.product), method: :delete do |f| %>
-                  <%= f.submit "Remove", class: "btn-space-station" %>
+                  <%= f.submit "Remove", class: "regular-text" %>
                   <% end %>
                 </td>
               </tr>
@@ -93,7 +93,7 @@
         <td>Designer Total:</td>
         <td>$<span class="table-total"></span></td>
         <td>
-          <input type="submit" value= "--- Place Order ---" class="btn-space-station">
+          <input type="submit" value= "Place Order" class="btn-space-station">
         </td>
       </tfoot>
     </table>
