@@ -18,3 +18,17 @@
   border-radius: 5px;
   box-shadow: 2px 2px 5px grey;
 }
+
+.sub-banner{
+  justify-content: space-around;
+  display: flex;
+  .sub-designer, .sub-buyer {
+    width: 600px;
+    text-align: center;
+    background-color: white;
+    height: 413px;
+    padding: 58xpx;
+    border-radius: 30px;
+    box-shadow: 1px;
+  }
+}
