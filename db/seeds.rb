@@ -183,7 +183,7 @@ Product.create!(
 # ____RAD HOURANI_______________________________________
 
 rad = Designer.create!(
-  categories: [Category.find_by(title: "Womenswear"),Category.find_by(title: "Meanswear"),Category.find_by(title: "Outerwear"), Category.find_by(title: "Accessories")],
+  categories: [Category.find_by(title: "Womenswear"),Category.find_by(title: "Menswear"), Category.find_by(title: "Outerwear"), Category.find_by(title: "Accessories")],
   brand: "RAD HOURANI",
   first_name: "Rad",
   last_name: "Hourani",
@@ -203,7 +203,7 @@ rad = Designer.create!(
 rad_col = Collection.create!(
   season: 'All year collection 3',
   year:2018,
-  detail: " Ageless raceless nationaless genderless limitless",
+  detail: " geless raceless nationaless genderless limitless",
   designer: rad
 )
 
@@ -214,8 +214,8 @@ Product.create!(
   color: "white & blue",
   sizes:"small,medium,large",
   picture_1: "https://cdn.kobisi.com/cdn/image/39/114759/3/470/470/white-jacket.jpg",
-  collection: summer,
-  designer: bashaques,
+  collection: rad_col,
+  designer: rad,
   price: 215
 )
 
