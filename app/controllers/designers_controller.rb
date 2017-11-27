@@ -6,4 +6,8 @@
   def index
     @designers = Designer.all
   end
+
+  def dhome
+  end
+
 end

@@ -4,6 +4,11 @@
 //= require underscore
 //= require gmaps/google
 //= require_tree .
+//= require jquery-fileupload/basic
+//= require cloudinary/jquery.cloudinary
+//= require attachinary
+
+
 
 $(".alert" ).fadeOut(3000);
 

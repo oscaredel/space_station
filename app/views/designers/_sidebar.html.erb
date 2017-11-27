@@ -5,7 +5,7 @@
   </h2>
   <ul class="list-unstyled bio-box">
     <li class="brand">
-      <%= @designer.first_name%> <%= @designer.last_name %>
+     Contact person: <%= @designer.first_name%> <%= @designer.last_name %>
    </li>
    <li>
      <span class="city"><%= @designer.city %></span> - <span class="year"><%= @designer.age %></span>
@@ -28,6 +28,8 @@
   <%= link_to category.title, category_path(category)%>
   <% end %>
 </p>
+<p> <strong>Presence: Europe, Middle East</strong>
+  </p>
 </em>
 
 <div class="second-section">

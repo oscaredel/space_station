@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :retailers
   # ALWAYS PUT ROOT ROUTE AT THE BEGINNING OF THE FILE
   root to: 'pages#home'
+  mount Attachinary::Engine => "/attachinary"
 
   # STATIC PAGES
   get '/buyers', to: 'pages#buyers'
@@ -10,9 +11,6 @@ Rails.application.routes.draw do
   get '/faq', to: 'pages#faq'
   get '/live_chat', to: 'pages#live_chat'
   get '/about', to: 'pages#about'
-
-
-
 
   # devise_for :retailers
 
@@ -23,7 +21,7 @@ Rails.application.routes.draw do
 
   resources :categories, only: [ :show ]
 
-  resources :designers, only: [:show, :index] do
+  resources :designers, only: [:show, :index, :dhome] do
     resources :looks, only: [:show]
     resources :products, only: [:show]
   end
@@ -33,3 +31,5 @@ Rails.application.routes.draw do
     resources :store_products, only: [:create, :destroy]
   end
 end
+
+

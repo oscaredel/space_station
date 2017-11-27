@@ -6,7 +6,7 @@
 <div class="container">
   <div class="designer-wishlist-table">
     <h2 class="text-center">
-      Plan for <%= @retailer.store_collection.season %> <%= @retailer.store_collection.year %>
+      Plan for <%= @retailer.store_collection.try(:season) %> <%= @retailer.store_collection.try(:year) %>
     </h2>
     <div class="designer-wishlist-table">
       <% @store_products_grouped_by_designer.each do |designer, store_products| %>

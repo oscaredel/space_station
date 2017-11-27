@@ -4,6 +4,6 @@ class Retailer < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # has_many :store_collections # FUTURE
   has_one :store_collection, dependent: :destroy
+  has_many :store_products, through: :store_collection
 end
