@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :designers
-  devise_for :retailers
+  devise_for :designers, controllers: { registrations: "registrations" }
+  devise_for :retailers, controllers: { registrations: "registrations" }
   # ALWAYS PUT ROOT ROUTE AT THE BEGINNING OF THE FILE
   root to: 'pages#home'
   mount Attachinary::Engine => "/attachinary"
@@ -21,10 +21,11 @@ Rails.application.routes.draw do
 
   resources :categories, only: [ :show ]
 
-  resources :designers, only: [:show, :index, :dhome] do
+  resources :designers, only: [:show, :index] do
     resources :looks, only: [:show]
     resources :products, only: [:show]
   end
+  resources :designers, only: [:edit, :update]
 
   resource :retailer, only: [:show, :edit, :update, :index]
   resource :store_collection, only: [:show, :new, :create, :edit, :update] do

@@ -1,11 +1,16 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Roboto|Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Slabo+27px|Quicksand:300,400,500,700|Hind:300,400,500,600,700');
+
 
 // Define fonts for body and headers
-$body-font: "Slabo", "Helvetica", "sans-serif";
-$headers-font: "Roboto", "Helvetica", "sans-serif";
-$goth-font: "Gotham-Rounded";
 
+$body-font: 'Roboto', sans-serif;
+$headers-font: 'Hind', serif;
+// $body-font: "Slabo", "Helvetica", "sans-serif";
+// $headers-font: "Roboto", "Helvetica", "sans-serif";
+
+
+$goth-font: "Gotham-Rounded";
 // To use a font file (.woff) uncomment following lines
  @font-face {
    font-family: "Gotham-Rounded";
@@ -21,5 +26,6 @@ $goth-font: "Gotham-Rounded";
 //        font-url('FontFile.ttf') format('truetype')
  }
 // $my-font: "Font Name";
+
 
 

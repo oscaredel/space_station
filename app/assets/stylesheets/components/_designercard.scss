@@ -7,8 +7,9 @@
   padding: 0px;
   margin: 20px auto;
   a {
+    display: inline-flex;
+    margin: 0 auto;
     position: relative;
-    display: flex;
     height: 100%;
     &:hover .card-back {
       opacity: 1;
@@ -45,7 +46,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 5px;
   padding-bottom: 5px;
   & :hover {
     opacity: 50%
@@ -54,7 +54,8 @@
 
 .brandname {
   font-size:20px;
-  font-weight: 50%;
+  text-transform: uppercase;
+    font-weight: bolder;
   text-align: center;
 }
 

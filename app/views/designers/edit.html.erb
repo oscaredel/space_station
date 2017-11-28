@@ -1,0 +1,15 @@
+<h1>Designer profile</h1>
+
+<%= simple_form_for(@designer) do |f| %>
+
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :brand %>
+  <%= f.input :age %>
+  <%= f.input :city %>
+  <%= f.input :detail %>
+  <%= f.input :profile_photo, as: :attachinary %>
+
+ <!--  as: :attachinary %> -->
+  <%= f.button :submit %>
+<% end %>

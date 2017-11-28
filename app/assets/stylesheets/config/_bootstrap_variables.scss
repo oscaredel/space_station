@@ -6,7 +6,7 @@
 // General style
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
-$body-bg:                 $misty-rose;
+$body-bg:                 $baby-powder;
 $font-size-base: 14px;
 
 // Colors
@@ -33,4 +33,9 @@ $border-radius-small: 2px;
   &:hover {
   text-decoration: underline;
   }
+}
+
+body {
+  padding-top: 50px;
+  -webkit-font-smoothing: antialiased;
 }

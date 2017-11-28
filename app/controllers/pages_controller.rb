@@ -12,7 +12,7 @@ class PagesController < ApplicationController
       <br> <h4 class='marker-text'>#{designer.first_name} #{designer.last_name}</h4> </a>
       </div>"
       marker.picture({
-        url: "#{view_context.image_path 'favicon-32x32.png'}",
+        url: "#{view_context.image_path 'favicon-16x16.png'}",
         width: 32,
         height: 32
         })

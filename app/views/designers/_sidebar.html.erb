@@ -17,7 +17,7 @@
   </li>
 </ul>
 
-  <div class="bio-image" style="background-image:url('<%= image_path @designer.profile_picture %>');">
+  <div class="bio-image" style="background-image:url('<%= cl_image_path @designer.profile_photo.path %>');">
   </div>
 
 
@@ -85,9 +85,13 @@
     <li>accessories</li>
   </ul>
 
-  <center>
+  <% if current_designer == @designer %>
+  <%= link_to edit_designer_path(current_designer) do %>
+    <input  id="connect-btn" type="submit" value= "Update" class="btn-space-station">
+  <% end %>
+  <% else %>
     <input  id="connect-btn" type="submit" value="Connect" class="btn-space-station">
-  </center>
+  <% end %>
 
 </div>
 

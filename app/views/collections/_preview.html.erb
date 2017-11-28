@@ -1,6 +1,10 @@
+<% if collection %>
+
 <h5>
   <em>
-    <%= collection.detail.capitalize %>
+    <%= collection.detail.capitalize %> -
+    Production: 3 weeks
+    Shipping: 2 weeks
   </em>
 </h5>
 <div class="products-grid">
@@ -12,3 +16,5 @@
     <% end %>
   </div>
 </div>
+
+<% end %>
