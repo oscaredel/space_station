@@ -49,6 +49,7 @@ thebodysuitofbarcelona = Designer.create!(
   categories: [Category.find_by(title: "Womenswear")]
   )
 
+thebodysuitofbarcelona.profile_photo_url = "http://68.media.tumblr.com/af19fa7491391e5b6b730bfe05e00868/tumblr_ovraggvQUg1sl7ipso1_500.jpg"
 
 bodybarca = Collection.create!(
   season: "2018 1",
@@ -140,6 +141,7 @@ manish = Designer.create!(
 It was in 1997, that the world 1st viewed Manish's design aesthetic with the launch of his label 'Manish Arora'. With this he grew from strength to strength gaining a devoted following in the fashion world, which finally led to Manish exhibiting at the London Fashion Week in 2005. In 2007, Manish showcased for the 1st time in Paris Fashion Week. He became a member of the distinguished French Federation of Pret-a-Porter in 2009
 Today, Manish sells his creations worldwide across prestigious stores such as Printemps, Joyce and Saks 5th Avenue. In 2011, Manish was appointed the Creative Director for Iconic French Fashion House 'Paco Robanne' where he designed two successful collections. "
   )
+manish.profile_photo_url = "https://martjackstorage.blob.core.windows.net/in-resources/bdc03b70-0e3c-44d5-a4d5-68c7fad6cbd6/Images/userimages/Portrait-Manish-Arora.jpg"
 
 manish_col = Collection.create!(
   season: 'Summer',
@@ -200,6 +202,8 @@ rad = Designer.create!(
    TIMELESS STYLE FOR ANTI-CONFORMIST INDIVIDUALS.' - Rad Hourani "
    )
 
+rad.profile_photo_url = "https://cdn.shopify.com/s/files/1/0035/7742/files/Flanelle_Magazine_RAD_HOURANI_02_WEB678.jpg?v=1509053442"
+
 rad_col = Collection.create!(
   season: 'All year collection 3',
   year:2018,
@@ -243,6 +247,8 @@ bashaques = Designer.create!(
    Basak Cankes’ AW15/16 collection is awarded by Mediterranean
   Fashion Prize Committee in Marseille and Centre of Fashion Enterprise in United Kingdom in 2015."
   )
+
+bashaques.profile_photo_url = "https://cdn.kobisi.com/cdn/slider/167/2_1472025555/banner-32.jpg?v=1510646212"
 
 
  summer = Collection.create!(
@@ -303,8 +309,9 @@ rocket = Designer.create!(
 Launched 2010, ROCKET X LUNCHhas held 4 collections every year and been active domestically and internationally.
 This brand displays humorous designs through mixing things and surpassing common expectations as its brand name is implying.
 By doing so, ROCKET X LUNCHhas become a popular brand which is accepted as trendy and original with reasonable price among the young fashion influencers.
-"
-  )
+")
+
+rocket.profile_photo_url = "http://rocketxlunch.com/web/product/tiny/201709/3136_shop1_883602.jpg"
 
 rocket_col = Collection.create!(
   season: 'Winter',
@@ -425,6 +432,8 @@ libaya = Designer.create!(
   A LIBAYA top is that one staple item in a woman's wardrobe, easing her daily style decisions."
 )
 
+libaya.profile_photo_url = "https://static1.squarespace.com/static/57a492f14402439bb06d2c72/t/5958bd0146c3c49a050a26d2/1498987795266/Libaya+Campaign+OK15.jpeg?format=500w"
+
 
 lib_summer_18 = Collection.create!(
   season: 'Summer',
@@ -539,6 +548,46 @@ Product.create!(
   price: 30
 )
 
+# ____VIKA____________________________________________
+
+vika = Designer.create!(
+  categories: [Category.find_by(title:"Womenswear"), Category.find_by(title:"Accessories")],
+  brand: "Vika Gazinskaya",
+  first_name: "Vika",
+  last_name: "Gazinskaya",
+  email:"vika@vika.com",
+  password: "123456",
+  profile_photo_url: "https://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=220687197",
+  city: "Moscow",
+  age: 2007,
+  detail: " Vika Gazinskaya collections are internationally renowned and rooted in the highly personal aesthetics of its creator.
+Vika was born and raised in Moscow, Russia.
+During her time studying fashion design, she won a contest awarding her an internship at L'Officiel Russia, where she developed a deep knowledge of the fashion industry.
+After interning for a year, she was hired as a fashion editor and continued to work while finishing her studies.
+Vika then briefly worked as a freelancer, before debuting her eponymous ready-to-wear collection in 2007.
+In March 2010, Vika Gazinskaya presented her collection in Paris for the first time, attracting a more international audience.
+In July 2010, Vika was invited to create a window display for Parisian boutique Colette during Haute Couture fashion week. In 2012, Vika was one of six finalists for the coveted ANDAM award.
+In 2014 Vika was one of the finalist of generous LVMH Prize...")
+
+
+# ____ARM____________________________________________
+
+arm = Designer.create!(
+  categories: [Category.find_by(title: "Accessories")],
+  brand:"Armature",
+  first_name: "James",
+  last_name: "Johnson",
+  email: "hello@armature.com",
+  password: "123456",
+  profile_photo_url: "https://cdn.shopify.com/s/files/1/1062/9358/products/Barbed-Wire-Ear-Cuff-Lookbook_1024x1024.jpg?v=1506200670",
+  age:2015,
+  city: "Los Angeles",
+  detail: "Armature creates provocative pieces for women and men. ARMATURE officially launched in 2015 in Los Angeles, California by Founder, Designer and Creative Director, Sara Angelucci.
+Sara draws inspiration from the obscure producing unique fashion stories and designs that provoke emotion and thought, while bridging the gap between fashion and art.
+Armature designs are sought after by hollywood celebrities, socialites, fashion influencers and style trendsetters. Worn by the personalities of Ruby Rose, Sofia Richie, Rosie Huntington-Whitely, Carmen Electra, Karrueche Tran, Alison Sudol and others.
+Armature has been featured in major fashion publications such as Luomo Vogue, Nylon and C magazine as well as art driven magazines like VVV, Rogue and Hashtag magazine. Featured in a nation wide Urban Decay campaign and more.
+Sara was trained by Kate and Laura mulleavy of Rodarte from 2007-2010."
+  )
 
 
 # ____UMIT____________________________________________
@@ -562,6 +611,8 @@ Aesthetic imprinting leaves an indelible mark on fertile minds.
 Umit Benan was born to Turkish parents in Germany in 1980, and raised in Istanbul.
 As a kid in the 80s, he was bombarded with the assertive fashions and
 powerful masculine visions of the time, thanks to his clothing manufacturer father. As a teen in the 90s, he abs...")
+
+umit.profile_photo_url = "https://www.umitbenan.com/themes/default-bootstrap/img/2.jpg"
 
 fw_2018 = Collection.create!(
   season: "Spring",

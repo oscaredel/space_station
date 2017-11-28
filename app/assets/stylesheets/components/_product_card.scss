@@ -7,7 +7,7 @@
 }
 
 .product-card-high {
-  min-height: 630px;
+  min-height: 430px;
 }
 
 .product-card {
@@ -15,14 +15,12 @@
   flex-direction: column;
   overflow: hidden;
   justify-content: space-between;
-  border: 1px solid black;
   width: 100%;
   align-items: center;
   justify-content: space-around;
   border-radius: 5px;
   margin: 10px;
   background-color: white;
-  border: thin solid rgba(1,1,1,0.3);
   margin: 10px 10px;
 
   .product-details {
@@ -53,7 +51,7 @@ h2 {
 }
 
   .product-image-tall {
-    height: 314*1.618px;
+    height: 366.052px;
     width: 100%;
     background-size: cover;
   }

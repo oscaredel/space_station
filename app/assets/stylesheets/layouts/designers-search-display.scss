@@ -1,6 +1,8 @@
 .designers-search-display {
   display: flex;
   justify-content: space-between;
+  margin-left: -15px;
+  margin-right: -15px;
 
   .search_col_container{
     flex: 0 0 25%;
@@ -11,7 +13,7 @@
 
   .designer-container{
      flex: 1 0 70%;
-    padding: 0 50px;
+    padding-left: 50px;
 
   }
 }

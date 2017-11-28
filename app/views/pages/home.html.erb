@@ -1,40 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <%= render partial: 'shared/banner', locals: {
+        primary_header: "Space Station",
+        secondary_header: "Discover and source from the world's most exotic and talented fashion designers",
+        image: "https://sixtiescity.net/Fashion/stuff2102.jpg",
+        banner_size: "full"
+      } %>
 
-<%= render partial: 'shared/banner', locals: {
-  primary_header: "Space Station",
-  secondary_header: "Order from the world's most exotic and talented fashion designers",
-  image: "https://sixtiescity.net/Fashion/stuff2102.jpg",
-  banner_size: "full"
-} %>
-
-<div class="sub-banner">
-  <div class = "sub-buyer">
-   <h3> Buyers, </h3>
-   <ul>
-     <li>Discover fas</li>
-     <li>Source</li>
-     <li>Plan</li>
-   </ul>
-  </div>
-
-  <div class = "sub-designer">
-   <h3> Designers, </h3>
-   <ul>
-     <li>Get global exposure and expand your reach, the way you please!</li>
-     <li>Receive orders from retailers </li>
-     <li>Show your products, your looks, your runways & virtual showroom!</li>
-   </ul>
+    </div>
   </div>
 </div>
 
 
 <div class="container">
   <div class="row">
+<!--     <h1 class="text-center highlight-header">About us</h1>
+ -->    <div class="col-xs-12 col-lg-6">
+      <div class="sub-buyer">
+        <%= image_tag 'space-station-icon' %>
+        <h3> Buyers, </h3>
+        <p>
+          Discover, connect and source from the earth’s freshest fashion designers. The station gives you access to an exhaustive range of designer products of all styles that you can pre order and re-order anytime from anywhere. Access virtual showrooms, full product information and wholesale prices and manage orders easily. Prepare plans and place orders We make your business easier with our built in analytics that help order your business and give it clarity black black black.
+
+        </p>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-lg-6">
+      <div class="sub-designer">
+        <%= image_tag 'space-station-icon' %>
+
+        <h3> Designers, </h3>
+        <p>
+          Let’s get you out to <em>space</em>, where you will be much appreciated. The far corners long for your creative art! Upload collections and update product information. Set your preferences and connect with retailers across space. Receive and manage preorders and re orders. We these features make accurate production projections and real-time re-order info. Have all sales data in one place and optimize your business!
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
     <div class="col-xs-12">
-      <center><h1>Featured Designers</h1></center>
+      <h1 class="text-center highlight-header">Featured Designers</h1>
     </div>
   </div>
   <div class="row">
-    <% @designers.sample(3).each do |d| %>
+    <% @designers.sample(6).each do |d| %>
     <div class="col-xs-12 col-md-4">
       <%= render 'shared/designercard', designer: d %>
     </div>
@@ -46,271 +60,272 @@
   <%= link_to "Checkout More", designers_path, class: "btn-space-station" %>
 </div>
 
-<div id="map" style="width: 100%; height: 600px;"></div>
-
+<div class="gray-wrapper">
+  <div id="map" style="width: 100%; height: 600px;"></div>
+</div>
 <% content_for(:after_js) do %>
 <script>
   var handler = Gmaps.build('Google');
   var styles = [
+  {
+    "featureType": "all",
+    "elementType": "geometry",
+    "stylers": [
     {
-        "featureType": "all",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            }
-        ]
-    },
-    {
-        "featureType": "all",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "gamma": 0.01
-            },
-            {
-                "lightness": 20
-            }
-        ]
-    },
-    {
-        "featureType": "all",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "saturation": -31
-            },
-            {
-                "lightness": -33
-            },
-            {
-                "weight": 2
-            },
-            {
-                "gamma": 0.8
-            }
-        ]
-    },
-    {
-        "featureType": "all",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.country",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.province",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.locality",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.neighborhood",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.land_parcel",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "lightness": 30
-            },
-            {
-                "saturation": 30
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "labels.text",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape.man_made",
-        "elementType": "labels.text",
-        "stylers": [
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "saturation": 20
-            }
-        ]
-    },
-    {
-        "featureType": "poi.park",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "lightness": 20
-            },
-            {
-                "saturation": -20
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "lightness": 10
-            },
-            {
-                "saturation": -30
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "saturation": 25
-            },
-            {
-                "lightness": 25
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-            {
-                "lightness": -20
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
+      "color": "#ffffff"
     }
-]
+    ]
+  },
+  {
+    "featureType": "all",
+    "elementType": "labels.text.fill",
+    "stylers": [
+    {
+      "gamma": 0.01
+    },
+    {
+      "lightness": 20
+    }
+    ]
+  },
+  {
+    "featureType": "all",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+    {
+      "saturation": -31
+    },
+    {
+      "lightness": -33
+    },
+    {
+      "weight": 2
+    },
+    {
+      "gamma": 0.8
+    }
+    ]
+  },
+  {
+    "featureType": "all",
+    "elementType": "labels.icon",
+    "stylers": [
+    {
+      "visibility": "off"
+    }
+    ]
+  },
+  {
+    "featureType": "administrative",
+    "elementType": "all",
+    "stylers": [
+    {
+      "visibility": "off"
+    }
+    ]
+  },
+  {
+    "featureType": "administrative",
+    "elementType": "geometry",
+    "stylers": [
+    {
+      "visibility": "off"
+    }
+    ]
+  },
+  {
+    "featureType": "administrative",
+    "elementType": "labels",
+    "stylers": [
+    {
+      "visibility": "off"
+    }
+    ]
+  },
+  {
+    "featureType": "administrative.country",
+    "elementType": "all",
+    "stylers": [
+    {
+      "visibility": "off"
+    }
+    ]
+  },
+  {
+    "featureType": "administrative.province",
+    "elementType": "all",
+    "stylers": [
+    {
+      "visibility": "off"
+    }
+    ]
+  },
+  {
+    "featureType": "administrative.locality",
+    "elementType": "all",
+    "stylers": [
+    {
+      "visibility": "off"
+    }
+    ]
+  },
+  {
+    "featureType": "administrative.neighborhood",
+    "elementType": "all",
+    "stylers": [
+    {
+      "visibility": "off"
+    }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "all",
+    "stylers": [
+    {
+      "visibility": "off"
+    }
+    ]
+  },
+  {
+    "featureType": "landscape",
+    "elementType": "all",
+    "stylers": [
+    {
+      "visibility": "simplified"
+    }
+    ]
+  },
+  {
+    "featureType": "landscape",
+    "elementType": "geometry",
+    "stylers": [
+    {
+      "lightness": 30
+    },
+    {
+      "saturation": 30
+    }
+    ]
+  },
+  {
+    "featureType": "landscape",
+    "elementType": "labels.text",
+    "stylers": [
+    {
+      "visibility": "off"
+    }
+    ]
+  },
+  {
+    "featureType": "landscape.man_made",
+    "elementType": "labels.text",
+    "stylers": [
+    {
+      "visibility": "on"
+    }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "all",
+    "stylers": [
+    {
+      "visibility": "off"
+    }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+    {
+      "saturation": 20
+    }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+    {
+      "lightness": 20
+    },
+    {
+      "saturation": -20
+    }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "all",
+    "stylers": [
+    {
+      "visibility": "off"
+    }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+    {
+      "lightness": 10
+    },
+    {
+      "saturation": -30
+    }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry.stroke",
+    "stylers": [
+    {
+      "saturation": 25
+    },
+    {
+      "lightness": 25
+    }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "elementType": "all",
+    "stylers": [
+    {
+      "visibility": "off"
+    }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "all",
+    "stylers": [
+    {
+      "lightness": -20
+    }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+    {
+      "visibility": "on"
+    }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels",
+    "stylers": [
+    {
+      "visibility": "off"
+    }
+    ]
+  }
+  ]
 
 
   handler.buildMap({

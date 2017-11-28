@@ -1,19 +1,35 @@
 <div class="designercard">
+
   <%= link_to designer_path(designer) do %>
   <div class="card-back">
-    <div class="card-back-image" style="background-image:url('<%= image_path designer.collections.last.products.first.picture_1 %>');"></div>
+
+
+  <% if !designer.collections.blank? %>
+    <div class="card-back-image" style="background-image:url('<%= image_path designer.collections.last.products.first.picture_1  %>');"></div>
+  <% end %>
+
   </div>
+
+
+<% if !designer.profile_photo.blank? %>
   <div class="brand-content">
-    <div class="brand-avatar" style="background-image:url('<%= image_path designer.profile_picture %>');">
+    <div class="brand-avatar" style="background-image:url('<%= cl_image_path designer.profile_photo.path %>');">
     </div>
     <div class="brandname">
       <%= designer.brand %>
     </div>
   </div>
-  <div class="collection-photos">
-    <% designer.collections.last.products.first(4).each do |product| %>
-    <%= image_tag product.picture_1, width: 50 %>
-    <% end %>
-  </div>
+<% end %>
+
+  <% if !designer.collections.blank? %>
+    <div class="collection-photos">
+      <% designer.collections.last.products.first(4).each do |product| %>
+      <%= image_tag product.picture_1, width: 50 %>
+      <% end %>
+    </div>
   <% end %>
+
+
+  <% end %>
+
 </div>
