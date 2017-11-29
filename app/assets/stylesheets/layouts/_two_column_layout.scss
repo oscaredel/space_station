@@ -5,6 +5,7 @@
   margin-left: -15px;
   margin-right: -15px;
   margin-top: 50px;
+
   .sidebar {
     flex: 0 0 25%;
     background-color: white;
@@ -19,24 +20,20 @@
       .city {
         font-weight: 800;
       }
-    }
-    .bio-image {
-      width: 150px;
-      height: 150px;
-      background-size: cover;
-      background-position: center;
-      margin: 0 auto;
-    }
-    .description {
-      margin-top: 10px;
-    }
-    ul {
-      li {
+      .bio-image {
+        width: 150px;
+        height: 150px;
+        background-size: cover;
+        background-position: center;
+        margin: 0 auto;
+      }
 
+      .description {
+        margin-top: 10px;
       }
     }
-
   }
+
   .content {
     .cards-container {
       em {
@@ -45,19 +42,18 @@
         font-size: 13px;
         color: black;
         font-weight: 200;
-
       }
 
       h5 {
         border-top: thin solid darkgrey;
-        padding-top:5px;
-
+        padding-top: 5px;
       }
     }
 
-    .collection-header{
-      margin-top:20px;
-      border-radius:20px;
+
+    .collection-header {
+      margin-top: 20px;
+      border-radius: 20px;
       background-color: white;
       padding: 2px 15px;
       // border-bottom: 1px solid rgba(1,1,1,.3);
@@ -65,17 +61,14 @@
       h2 {
         margin-top: 25px;
       }
+
+      flex: 1 0 77%;
+      padding-left: 50px;
     }
 
-    flex: 1 0 77%;
-    padding-left: 50px;
-    p {
-
+    .long-text {
+      line-height: 1.314;
     }
-
 
   }
-}
-.long-text {
-  line-height: 1.314;
 }
