@@ -1,10 +1,18 @@
+.breadcrumbs {
+margin: 20px 0;
+a {
+  &:hover {
+  color: $space-orange;
+  }
+}
+}
+
 .two-column-layout-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-left: -15px;
   margin-right: -15px;
-  margin-top: 50px;
 
   .sidebar {
     flex: 0 0 25%;
@@ -12,7 +20,7 @@
     padding: 20px;
     .bio-box {
       .brand {
-        font-size: 20px;
+        font-size: 17px;
         color: gray;
         font-style: italic;
         margin-bottom: 5px;
@@ -37,7 +45,6 @@
   .content {
     .cards-container {
       em {
-        margin-left: 11px;
         line-height: 13px;
         font-size: 13px;
         color: black;
@@ -45,17 +52,22 @@
       }
 
       h5 {
+        line-height: 22px;
+        margin-left: 42px;
+        padding: 10px 0;
         border-top: thin solid darkgrey;
         padding-top: 5px;
+        border-bottom: thin solid darkgrey;
       }
     }
 
 
     .collection-header {
       margin-top: 20px;
+      margin-bottom: 21px;
       border-radius: 20px;
       background-color: white;
-      padding: 2px 15px;
+      padding: 0px 33px;
       // border-bottom: 1px solid rgba(1,1,1,.3);
       // box-shadow: 0px 0px 6px rgba(1,1,1,0.3);
       h2 {
@@ -63,7 +75,7 @@
       }
 
       flex: 1 0 77%;
-      padding-left: 50px;
+      padding-left: 40px;
     }
 
     .long-text {

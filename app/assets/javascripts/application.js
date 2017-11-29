@@ -10,7 +10,7 @@
 
 
 
-$(".alert" ).fadeOut(3000);
+$(".alert" ).fadeOut(5000);
 
 var thumbnails = document.querySelectorAll('.product-image-small');
 var highlight = document.getElementById('highlight')

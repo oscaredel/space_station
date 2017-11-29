@@ -1,17 +1,22 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
+      <div class="breadcrumbs">
+        <%= link_to "Designers", designers_path %> > <%= @designer.brand %>
+      </div>
+    </div>
+    <div class="col-xs-12">
       <div class="two-column-layout-container">
 
-  <div class="sidebar">
-    <%= render partial: 'sidebar' %>
-  </div>
+        <div class="sidebar">
+          <%= render partial: 'sidebar' %>
+        </div>
 
-  <div class="content">
-    <%= render partial: 'content' %>
-  </div>
+        <div class="content">
+          <%= render partial: 'content' %>
+        </div>
 
-</div>
+      </div>
 
 
 

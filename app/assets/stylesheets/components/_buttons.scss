@@ -41,3 +41,17 @@
     text-decoration: none;
   }
 }
+
+
+
+.container {
+  .row {
+    #designers-link {
+      &:hover {
+        color: $space-orange;
+        font-weight:bolder;
+      }
+
+    }
+  }
+}

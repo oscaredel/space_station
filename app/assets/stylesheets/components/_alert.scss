@@ -8,10 +8,11 @@
   color: black;
   border: none;
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
   left: 0;
   z-index: 9999;
+  border: 1px solid gray;
 }
 .alert-info {
   background: $floral-white;

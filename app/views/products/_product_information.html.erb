@@ -6,8 +6,10 @@
   <strong>Collection:</strong> <%= product.collection.detail %> <br>
   <strong>Comes in sizes:</strong> <%= product.sizes %> <br>
   <strong>Color:</strong> <%= product.color %> <br>
-  <em>Detail:</em> <%= product.detail %> <br>
-  <em>Wholesale price:</em> $<%= product.price %> - <strong>RRP: $<%= product.price*2 %></strong>
+  <strong>Detail:</strong> <%= product.detail %> <br>
+  <strong>Wholesale price:</strong> $<%= product.price %> <br>
+  <strong>RRP: </strong> $<%= product.price*2 %>
+
 </div>
 <div class="btn-add-to-selections">
   <% if StoreProduct.pluck(:product_id).include?(product.id) %>

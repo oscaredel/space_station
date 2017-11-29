@@ -1,14 +1,69 @@
-<center>
-  <h3> <%= @category.title %> </h3>
-</center>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
 
 
-<div class="row">
+<div class="designers-search-display">
+
+<div class="search-col-container">
+   <h4 class="text-center">Regions</h4>
+  <ul>
+    <li>Africa</li>
+    <li>Asia</li>
+    <li>North America</li>
+    <li>Central America</li>
+    <li>South America</li>
+    <li>Middle East</li>
+    <li>Europe</li>
+    <li>Oceania</li>
+  </ul>
+
+  <h4 class='text-center'>Categories</h4>
+  <ul>
+    <% Category.all.each do |category| %>
+      <li> <%= link_to category.title, category_path(category)  %> </li>
+    <% end %>
+  </ul>
+
+
+    <h4 class="text-center">Styles</h4>
+  <ul>
+    <li>Bohemian</li>
+    <li>Dandy</li>
+    <li>Minimalist</li>
+    <li>Smart</li>
+    <li>Casual/Street</li>
+    <li>Couture</li>
+    <li>Vintage</li>
+    <li>Preppy</li>
+    <li>Androgynous</li>
+  </ul>
+</div>
+
+
+<div class="designer-container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="text-center with-underline"><%= @category.title %></h1>
+    </div>
+  </div>
+  <!-- For all designers -> make a designer card -->
+  <div class="row">
     <% @category.designers.each do |d| %>
     <div class="col-xs-12 col-md-6">
       <%= render 'shared/designercard', designer: d %>
     </div>
     <% end %>
   </div>
+</div>
+
+</div>
+    </div>
+  </div>
+</div>
+
+
+
 
 <!-- Designer.where {designer.categories.includes? { category.title == 'Menswear' }} -->

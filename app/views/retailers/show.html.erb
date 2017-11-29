@@ -1,111 +1,109 @@
-<div class="container all-btn">
-  <%= link_to "Designers", designers_path, class: "btn btn-space-station"%>
-</div>
-
-
 <div class="container">
+ <div class="breadcrumbs">
+  <%= link_to "Designers", designers_path %>
+</div>
+<div class="designer-wishlist-table">
+  <h2 class="text-center plan-header">
+    Plan for <%= @retailer.store_collection.try(:season) %> <%= @retailer.store_collection.try(:year) %>
+  </h2>
   <div class="designer-wishlist-table">
-    <h2 class="text-center">
-      Plan for <%= @retailer.store_collection.try(:season) %> <%= @retailer.store_collection.try(:year) %>
-    </h2>
-    <div class="designer-wishlist-table">
-      <% @store_products_grouped_by_designer.each do |designer, store_products| %>
-      <div class="row">
-        <h3><%= designer.brand %></h3>
+    <% @store_products_grouped_by_designer.each do |designer, store_products| %>
+    <div class="row">
+      <h3><%= designer.brand %></h3>
 
-        <table class="wishlist">
-          <thead>
-            <tr>
-              <th>
+      <table class="wishlist">
+        <thead>
+          <tr>
+            <th>
 
-              </th>
-              <th>
-                name
-              </th>
-              <th>
-                Detail
-              </th>
-              <th>
-                Price
-              </th>
-              <th>
-                QTY
-              </th>
-              <th>
-                Total
-              </th>
-              <th>
-              </th>
-            </tr>
-          </thead>
+            </th>
+            <th>
+              name
+            </th>
+            <th>
+              Detail
+            </th>
+            <th>
+              Price
+            </th>
+            <th>
+              QTY
+            </th>
+            <th>
+              Total
+            </th>
+            <th>
+            </th>
+          </tr>
+        </thead>
 
-          <tbody>
-            <% store_products.each do |store_product| %>
-            <div class="js-quantity-form" data-product-price="<%= store_product.product.price %>" data-product-id="<%= store_product.product.id %>">
+        <tbody>
+          <% store_products.each do |store_product| %>
+          <div class="js-quantity-form" data-product-price="<%= store_product.product.price %>" data-product-id="<%= store_product.product.id %>">
 
-              <tr data-target="<%= store_product.product.id %>">
-                <td class="prod-thumb" style="background-image:url('<%= image_path store_product.product.picture_1 %>');">
+            <tr data-target="<%= store_product.product.id %>">
+              <td class="prod-thumb" style="background-image:url('<%= image_path store_product.product.picture_1 %>');">
 
-                </td>
-                <td id= "prod-name">
-                  <p><%= store_product.product.name %></p>
-                </td>
-                <td>
-                  <p><%= store_product.product.detail %></p>
-                </td>
-                <td>
-                  $ <span id="<%= store_product.product.id %>-price">
-                    <%= store_product.product.price %>
-                  </span>
-                </td>
-                <td>
-                  <div class="form-box">
-                    <% store_product.product.sizes.split(",").each do |s| %>
-                    <div class="form-group">
-                      <label for="js-product-quantity-<%= store_product.product.id %>"> <%=s%>
-                      </label>
-                      <input id="js-product-quantity-<%= store_product.product.id %>" type="number" class="price-input form-control" data-target="<%= store_product.product.id %>" placeholder="10">
-                    </div>
-                    <% end %>
+              </td>
+              <td id= "prod-name">
+                <p><%= store_product.product.name %></p>
+              </td>
+              <td>
+                <p><%= store_product.product.detail %></p>
+              </td>
+              <td>
+                $ <span id="<%= store_product.product.id %>-price">
+                  <%= store_product.product.price %>
+                </span>
+              </td>
+              <td>
+                <div class="form-box">
+                  <% store_product.product.sizes.split(",").each do |s| %>
+                  <div class="form-group">
+                    <label for="js-product-quantity-<%= store_product.product.id %>"> <%=s%>
+                    </label>
+                    <input id="js-product-quantity-<%= store_product.product.id %>" type="number" class="price-input form-control" data-target="<%= store_product.product.id %>" placeholder="10">
                   </div>
-                </td>
-                <td>
-                  $<span id="<%= store_product.product.id %>-total" class="row-total"></span>
-                </td>
-                <td>
-                  <!-- <input type="submit" value= "Remove" class="btn-space-station"> -->
-                  <%= simple_form_for :product, url: store_collection_store_product_path(store_product.product), method: :delete do |f| %>
-                  <%= f.submit "Remove", class: "regular-text" %>
                   <% end %>
-                </td>
-              </tr>
-            </div>
+                </div>
+              </td>
+              <td>
+                $<span id="<%= store_product.product.id %>-total" class="row-total"></span>
+              </td>
+              <td>
+                <!-- <input type="submit" value= "Remove" class="btn-space-station"> -->
+                <%= simple_form_for :product, url: store_collection_store_product_path(store_product.product), method: :delete do |f| %>
+                <%= f.submit "Remove", class: "regular-text" %>
+                <% end %>
+              </td>
+            </tr>
           </div>
         </div>
-        <!-- <h3 sclass="<%= store_product.product.id %>-accumulative-total-brand">...</h3> -->
-        <% end %>
-      </tbody>
-      <tfoot class = "tfoot">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>Designer Total:</td>
-        <td>$<span class="table-total"></span></td>
-        <td>
-          <input type="submit" value= "Place Order" class="btn-space-station">
-        </td>
-      </tfoot>
-    </table>
-  </div>
-  <% end %>
-  <h2 class="text-center">
-    Total:
-    $
-    <span id="accumulative-total">
+      </div>
+      <!-- <h3 sclass="<%= store_product.product.id %>-accumulative-total-brand">...</h3> -->
+      <% end %>
+    </tbody>
+    <tfoot class = "tfoot">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Designer Total:</td>
+      <td>$<span class="table-total"></span></td>
+      <td>
+        <input type="submit" value= "Place Order" class="btn-space-station">
+      </td>
+    </tfoot>
+  </table>
+</div>
+<% end %>
+<h2 class="text-center">
+  Total:
+  $
+  <span id="accumulative-total">
 
-    </span>
-  </h2>
+  </span>
+</h2>
 </div>
 </div>
 
