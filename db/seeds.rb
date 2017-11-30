@@ -1146,13 +1146,15 @@ wide side welt pockets. 100% water proof cotton",
    Product.create!(
   name: "HOODIE SHEARLING COAT",
   detail: "100% Sheraling",
-  color: "Brown",
+  color: "Navy",
   sizes: "44,46,48,50",
   picture_1: "https://www.umitbenan.com/1895/hoodie-shearling-coat.jpg",
   collection: fw_2018,
   designer: umit,
   price: 1800
   )
+
+
 
     Product.create!(
   name: "BOMBER with LEATHER SLEEVES",
@@ -1187,45 +1189,6 @@ wide side welt pockets. 100% water proof cotton",
   price: 900
   )
 
-   Product.create!(
-  name: "HOODIE SHEARLING COAT",
-  detail: "100% Sheraling",
-  color: "Blue",
-  sizes: "44,46,48,50",
-  picture_1: "https://www.umitbenan.com/1900/hoodie-shearling-coat.jpg",
-  picture_2: "https://www.umitbenan.com/1899/hoodie-shearling-coat.jpg",
-  picture_3: "https://www.umitbenan.com/1901/hoodie-shearling-coat.jpg",
-  picture_4: "https://www.umitbenan.com/1903/hoodie-shearling-coat.jpg",
-  collection: fw_2018,
-  designer: umit,
-  price: 1800
-  )
-
-   Product.create!(
-  name: "HOODIE SHEARLING COAT",
-  detail: "100% Sheraling",
-  color: "Brown",
-  sizes: "44,46,48,50",
-  picture_1: "https://www.umitbenan.com/1904/hoodie-shearling-coat.jpg",
-  picture_2: "https://www.umitbenan.com/1905/hoodie-shearling-coat.jpg",
-  picture_3: "https://www.umitbenan.com/1907/hoodie-shearling-coat.jpg",
-  picture_4: "https://www.umitbenan.com/1908/hoodie-shearling-coat.jpg",
-  collection: fw_2018,
-  designer: umit,
-  price: 1800
-  )
-
-
-   Product.create!(
-  name: "HOODIE SHEARLING COAT",
-  detail: "100% Sheraling",
-  color: "Brown",
-  sizes: "44,46,48,50",
-  picture_1: "https://www.umitbenan.com/1895/hoodie-shearling-coat.jpg",
-  collection: fw_2018,
-  designer: umit,
-  price: 1800
-  )
 
   Product.create!(
   name: "SHERPA JEANS JACKET",

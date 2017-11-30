@@ -9,7 +9,7 @@
   <div class="designer-wishlist-table">
     <% @store_products_grouped_by_designer.each do |designer, store_products| %>
     <div class="row">
-      <h3><%= link_to designer.brand, designer_path(designer) %></h3>
+      <h3><%= designer.city %> // <%= link_to designer.brand, designer_path(designer) %></h3>
 
       <table class="wishlist">
         <thead>
