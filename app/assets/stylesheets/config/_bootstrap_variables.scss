@@ -11,8 +11,8 @@ $font-size-base: 14px;
 
 // Colors
 $gray-base:       $gray;
-$brand-primary:   $blue;
-$brand-success:   $green;
+$brand-primary:   $space-orange;
+$brand-success:   $space-orange;
 $brand-info:      $yellow;
 $brand-danger:    $red;
 $brand-warning:   $orange;
@@ -41,6 +41,15 @@ body {
 }
 
 
+.row-relative {
+  position: relative;
+  .image-absolute-center {
+    position: absolute;
+    bottom: -10px;
+    right: 50%;
+    width: 50px;
+  }
+}
 
 
 

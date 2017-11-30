@@ -727,6 +727,159 @@ Armature has been featured in major fashion publications such as Luomo Vogue, Ny
 Sara was trained by Kate and Laura mulleavy of Rodarte from 2007-2010."
   )
 
+# ____DEZIGNERS_______________________________________
+
+mex = Designer.create!(
+  categories:[Category.find_by(title: "Womenswear")],
+  first_name:"Barbara",
+  last_name:"Sanchez-Kane",
+  brand: "Sanchez-Kane",
+  email:"music@designer.com",
+  password: "123456",
+  city:"Mexico City",
+  age:2008,
+  detail:"",
+  profile_photo_url: "http://cdn.vogue.mx/uploads/images/thumbs/mx/vog/2/s/2016/41/entrevista_a_barbara_disenadora_de_sanchez_kane_3592_490x.jpg")
+
+mex = Designer.create!(
+  categories:[Category.find_by(title: "Womenswear")],
+  first_name:"Rosie",
+  last_name:"Assoulin",
+  brand: "Rosie Assoulin",
+  email:"solomon@designer.com",
+  password: "123456",
+  city:"New York",
+  age:2008,
+  detail: "Eloquent & Timeless",
+  profile_photo_url: "http://www.badueh.com/wp-content/uploads/2017/04/Rosie.jpg")
+
+mex = Designer.create!(
+  categories:[Category.find_by(title: "Accessories")],
+  first_name:"Jida",
+  last_name:"Hull",
+  brand: "Freedom of Movement",
+  email:"fusion@designer.com",
+  password: "123456",
+  city:"Cape Town",
+  age: 2008,
+  detail: "",
+  profile_photo_url: "http://csa.global/sites/default/files/Freedom%20of%20movement%20FOM%20CSA%20The%20Wire%201.jpg")
+
+mex = Designer.create!(
+  categories:[Category.find_by(title: "Womenswear")],
+  first_name:"House of",
+  last_name:"Eden",
+  brand: "House of Eden",
+  email:"karate@designer.com",
+  password: "123456",
+  city:"Addis Ababa",
+  age:2008,
+  detail:"",
+  profile_photo_url: "https://static.wixstatic.com/media/ea4a9a_1385a1b0d4ec46f3977eaff25046971a~mv2_d_3881_5822_s_4_2.jpg/v1/crop/w_250,h_445,x_11,y_0,scl_0.08,q_90,usm_4.80_0.48_0.00/ea4a9a_1385a1b0d4ec46f3977eaff25046971a~mv2_d_3881_5822_s_4_2.jpg")
+
+mex = Designer.create!(
+  categories:[Category.find_by(title: "Womenswear")],
+  first_name:"H",
+  last_name:"H",
+  brand: "Ioanna Kourbela",
+  email:"soledad@designer.com",
+  password: "123456",
+  city:"Athens",
+  age:2008,
+  detail:"",
+  profile_photo_url: "https://i.pinimg.com/736x/db/e1/93/dbe193aebbc26e7b40eb6188133acc41--athens-fashion-designer.jpg")
+
+mex = Designer.create!(
+  categories:[Category.find_by(title: "Accessories")],
+  first_name:"Sarah",
+  last_name:"Beydoun",
+  brand: "Sarah's Bag",
+  email:"jihad@designer.com",
+  password: "123456",
+  city:"Beirut",
+  age:2008,
+  detail:"",
+  profile_photo_url: "https://shop.sarahsbag.com/corporate3/images/9309/carrousel-2-psychedelia.jpg?width=298")
+
+mex = Designer.create!(
+  categories:[Category.find_by(title: "Accessories")],
+  first_name:"Nathalie",
+  last_name:"Trad",
+  brand: "Nathalie Trad",
+  email:"hellogirl@designer.com",
+  password: "123456",
+  city:"Dubai",
+  age:2008,
+  detail:"BORN IN BEIRUT AND RAISED IN DUBAI, NATHALIE TRAD DEVELOPED A STRONG PENCHANT FOR ASYMMETRIC DESIGNS – WHICH TODAY FORMS THE BASIS OF HER EPONYMOUS LINE – WHILST EARNING A BA FROM PARIS’ ESMOD INTERNATIONAL. IT WAS THEN, IN 2007, THAT SHE DISCOVERED HER PERSONAL DESIGN ETHOS: TO TAKE CLASSIC SHAPES – UBIQUITOUS IN OUR NATURAL ENVIRONMENT – AND RADICALLY TRANSFORM THEM, DECONSTRUCTING AND REDEFINING THE BOUNDARIES OF FASHION AESTHETICS.
+
+IN 2008, TRAD RELOCATED TO NEW YORK TO FURTHER PURSUE THIS VISION. THERE, ...",
+  profile_photo_url: "http://www4.pictures.zimbio.com/gi/Nathalie+Trad+Presentation+Spring+2016+New+oAGps1Mce4Vl.jpg")
+
+mex = Designer.create!(
+  categories:[Category.find_by(title: "Womenswear")],
+  first_name:"Jida",
+  last_name:"Hull",
+  brand: "Illustrated People",
+  email:"helloboy@designer.com",
+  password: "123456",
+  city:"London",
+  age:2008,
+  detail:"",
+  profile_photo_url: "https://www.illustratedpeople.com/images/velour-sports-tracksuit-bottoms-p178-477_medium.jpg"
+  )
+
+mex = Designer.create!(
+  categories:[Category.find_by(title: "Womenswear")],
+  first_name:"Tufi",
+  last_name:"Duek",
+  brand: "Tufi Duek",
+  email:"himynames@designer.com",
+  password: "123456",
+  city:"Rio de Janeiro",
+  age:2008,
+  detail:"",
+  profile_photo_url: "https://www.fashiongonerogue.com/wp-content/uploads/2013/07/isabeli-tufi-duek-ad1.jpg"
+  )
+
+ex = Designer.create!(
+  categories:[Category.find_by(title: "Womenswear")],
+  first_name:"Henry",
+  last_name:"Lau",
+  brand: "Henry Lau",
+  email:"himyndames@designer.com",
+  password: "123456",
+  city:"Hong Kong",
+  age:2008,
+  detail:"",
+  profile_photo_url: "https://pbs.twimg.com/media/DPenw3SUQAAHUY7.jpg"
+  )
+
+ex = Designer.create!(
+  categories:[Category.find_by(title: "Womenswear")],
+  first_name:"Angel",
+  last_name:"Chen",
+  brand: "Angel Chen",
+  email:"himynsames@designer.com",
+  password: "123456",
+  city:"Shanghai",
+  age:2008,
+  detail:"Angel Chen was first introduced by Dongliang and sponsored by Sony in October 2014. Through SS15 catwalk entitled “The Rite of Spring”; orders from renowned LA retailer H.Lorenzo swiftly followed! The label’s AW15 collection won Fashion Scout’s “Ones to Watch” Award and was presented during London Fashion Week. In May 2015, Angel Chen created a capsule SS16 collection “Youthquake” for H.Lorenzo’s window display. Meanwhile, Angel Chen has received orders from prestigious stockists worldwide including Lane Crawford, IT and Urban Outfitters, and collaborated with Swarovski, Airbnb, Kiehl’s and Sony. Now London and Shanghai-based Angel Chen aims to continue using bright colours and mix materials to create an innocent, free-spirited and quirky character for creative people.",
+  profile_photo_url: "http://angelchenstudio.com/wp-content/uploads/2016/09/AngelChen004-1.jpg"
+  )
+
+ex = Designer.create!(
+  categories:[Category.find_by(title: "Womenswear")],
+  first_name:"Jida",
+  last_name:"Hull",
+  brand: "Play Clan",
+  email:"himynssames@designer.com",
+  password: "123456",
+  city:"Mumbai",
+  age:2008,
+  detail:"",
+  profile_photo_url: "http://static.wixstatic.com/media/4a6ad3_7e1f9e9270f543198f4ba063cf40920c.jpg"
+  )
+
 
 # ____UMIT____________________________________________
 
@@ -750,17 +903,17 @@ Umit Benan was born to Turkish parents in Germany in 1980, and raised in Istanbu
 As a kid in the 80s, he was bombarded with the assertive fashions and
 powerful masculine visions of the time, thanks to his clothing manufacturer father. As a teen in the 90s, he abs...")
 
-umit.profile_photo_url = "https://www.umitbenan.com/themes/default-bootstrap/img/2.jpg"
+umit.profile_photo_url = "https://www.umitbenan.com/c/23-medium_default/art-by-night.jpg"
 
 fw_2018 = Collection.create!(
-  season: "Spring",
+  season: "Fall",
   year: 2018,
   detail: "i once loved a woman who loves menswear fw 2018",
   designer: umit
   )
 
 ss_2018 = Collection.create!(
-  season: "Fall",
+  season: "Spring",
   year: 2018,
   detail: "i once loved a woman who loves menswear fw 2018",
   designer: umit
@@ -780,7 +933,7 @@ sum_18_1 = Collection.create!(
   designer: umit
   )
 
-linen_suit_3 = Product.create!(
+  Product.create!(
   name: "TABACCO COTTON MARFA SUIT",
   detail: "Single Breasted Sartorial Jacket. Two Pleated Classic Pants.
 42% Md - 39% Li - 19% Co;",
@@ -794,8 +947,7 @@ linen_suit_3 = Product.create!(
   designer: umit,
   price: 600
   )
-
-  linen_suit_3 = Product.create!(
+Product.create!(
   name: "SALMON LINEN HECTOR SUIT",
   detail: "Single Breasted Sartorial Jacket. Two Pleated Classic Pants. 100% Linen;",
   color: "Salmon",
@@ -809,7 +961,99 @@ linen_suit_3 = Product.create!(
   price: 600
   )
 
-  linen_suit_3 = Product.create!(
+Product.create!(
+  name: "KIMONO",
+  detail: "Kimono with one patch pocket;
+grois-grain band side closure;
+multi stitched hems and UMIT BENAN logo label.",
+  color: "White",
+  sizes: "48,50",
+  picture_1: "https://www.umitbenan.com/2103/kimono.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 200
+  )
+
+  Product.create!(
+  name: "KIMONO",
+  detail: "Kimono with one patch pocket;
+grois-grain band side closure;
+multi stitched hems and UMIT BENAN logo label. 100% cotton piquet shirting;",
+  color: "White",
+  sizes: "48,50",
+  picture_1: "https://www.umitbenan.com/2103/kimono.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 200
+  )
+
+
+  Product.create!(
+  name: "KIMONO",
+  detail: "96% cotton, 4% stretch velvet;",
+  color: "Blue",
+  sizes: "48,50",
+  picture_1: "https://www.umitbenan.com/1184/kimono.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 150
+  )
+
+  Product.create!(
+  name: "KIMONO",
+  detail: "Kimono with one patch pocket;
+grois-grain band side closure;
+multi stitched hems and UMIT BENAN logo label; 100% wool coating",
+  color: "Navy",
+  sizes: "48,50",
+  picture_1: "https://www.umitbenan.com/2160/kimono.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 150
+  )
+
+
+   Product.create!(
+  name: "KIMONO",
+  detail: "Kimono with one patch pocket;
+grois-grain band side closure;
+multi stitched hems and umit benan logo label. 100% British mohair;",
+  color: "Navy stripes",
+  sizes: "48,50",
+  picture_1: "https://www.umitbenan.com/2206/kimono.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 150
+  )
+
+  Product.create!(
+  name: "TRENCHCOAT",
+  detail: "Double breasted herringbone wool trench coat
+with frontal and back western carre;
+horn buckle belt;
+inner belt in contrast velvet;
+tuxedo cuff detail. 100% virgin wool",
+  color: "Dark green",
+  sizes: "48,50,52",
+  picture_1: "https://www.umitbenan.com/2110/trench-coat.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 700
+  )
+
+  Product.create!(
+  name: "RAINCOAT",
+  detail: "Double breasted water proof cotton raincoat with velvet lapel;
+wide side welt pockets. 100% water proof cotton",
+  color: "Orange",
+  sizes: "48,50,52",
+  picture_1: "https://www.umitbenan.com/2139/raincoat.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 150
+  )
+
+  Product.create!(
   name: "WHITE LINEN HECTOR SUIT",
   detail: "Single Breasted Sartorial Jacket. Two Pleated Classic Pants. 100% Linen;",
   color: "White",
@@ -823,7 +1067,7 @@ linen_suit_3 = Product.create!(
   price: 600
   )
 
-jac_pants = Product.create!(
+  Product.create!(
   name: "MULTICOLOR JACQUARD MORNING PANTS",
   detail: "55% Co - 42% Li - 2% Pl - 1% Pa",
   color: "Multicolor",
@@ -837,7 +1081,7 @@ jac_pants = Product.create!(
   price: 91
   )
 
-karate_kid_trench_two = Product.create!(
+ Product.create!(
   name: "KARATE KID TRENCH COAT",
   detail: "100% Wool",
   color: "Navy",
@@ -851,7 +1095,7 @@ karate_kid_trench_two = Product.create!(
   price: 91
   )
 
-karate_pants = Product.create!(
+  Product.create!(
   name: "KARATE KID TRENCH COAT",
   detail: "100% Wool",
   color: "Brown",
@@ -866,17 +1110,166 @@ karate_pants = Product.create!(
   )
 
 
+  Product.create!(
+  name: "HOODIE SHEARLING COAT",
+  detail: "100% Sheraling",
+  color: "Blue",
+  sizes: "44,46,48,50",
+  picture_1: "https://www.umitbenan.com/1900/hoodie-shearling-coat.jpg",
+  picture_2: "https://www.umitbenan.com/1899/hoodie-shearling-coat.jpg",
+  picture_3: "https://www.umitbenan.com/1901/hoodie-shearling-coat.jpg",
+  picture_4: "https://www.umitbenan.com/1903/hoodie-shearling-coat.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 1800
+  )
 
-two_hundred_ninety_sqm = Retailer.create!(
-  first_name: "290sqm",
-  last_name: "Ido de Voos",
-  detail: "concept store in Istanbul with a branch in Zurich and Amsterdam",
-  email: "dido@290sqm.com",
-  password: "1222909",
-  profile_picture:"https://ist.290sqm.com/image/catalog/layout/logo_290sqm.png",
-  city: "Istanbul, Zurich",
-  age: 2010,
-)
+   Product.create!(
+  name: "HOODIE SHEARLING COAT",
+  detail: "100% Sheraling",
+  color: "Brown",
+  sizes: "44,46,48,50",
+  picture_1: "https://www.umitbenan.com/1904/hoodie-shearling-coat.jpg",
+  picture_2: "https://www.umitbenan.com/1905/hoodie-shearling-coat.jpg",
+  picture_3: "https://www.umitbenan.com/1907/hoodie-shearling-coat.jpg",
+  picture_4: "https://www.umitbenan.com/1908/hoodie-shearling-coat.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 1800
+  )
+
+
+   Product.create!(
+  name: "HOODIE SHEARLING COAT",
+  detail: "100% Sheraling",
+  color: "Brown",
+  sizes: "44,46,48,50",
+  picture_1: "https://www.umitbenan.com/1895/hoodie-shearling-coat.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 1800
+  )
+
+    Product.create!(
+  name: "BOMBER with LEATHER SLEEVES",
+  detail: "Wool with  Leather Sleeves",
+  color: "Red / Dark Brown",
+  sizes: "46,48,50",
+  picture_1: "https://www.umitbenan.com/1835/kk-bomber-with-leather-sleeves.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 700
+  )
+
+  Product.create!(
+  name: "BOMBER with LEATHER SLEEVES",
+  detail: "Wool with  Leather Sleeves",
+  color: "Black / Navy",
+  sizes: "46,48,50",
+  picture_1: "https://www.umitbenan.com/1973/kk-bomber-with-leather-sleeves.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 700
+  )
+
+  Product.create!(
+  name: "LEATHER HOODIE SCOTT JACKET",
+  detail: "100% Cow Leather Coppied with Diagonal Cotton Beige",
+  color: "Camel",
+  sizes: "44,46,48",
+  picture_1: "https://www.umitbenan.com/1931/scott-leather-jacket.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 900
+  )
+
+   Product.create!(
+  name: "HOODIE SHEARLING COAT",
+  detail: "100% Sheraling",
+  color: "Blue",
+  sizes: "44,46,48,50",
+  picture_1: "https://www.umitbenan.com/1900/hoodie-shearling-coat.jpg",
+  picture_2: "https://www.umitbenan.com/1899/hoodie-shearling-coat.jpg",
+  picture_3: "https://www.umitbenan.com/1901/hoodie-shearling-coat.jpg",
+  picture_4: "https://www.umitbenan.com/1903/hoodie-shearling-coat.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 1800
+  )
+
+   Product.create!(
+  name: "HOODIE SHEARLING COAT",
+  detail: "100% Sheraling",
+  color: "Brown",
+  sizes: "44,46,48,50",
+  picture_1: "https://www.umitbenan.com/1904/hoodie-shearling-coat.jpg",
+  picture_2: "https://www.umitbenan.com/1905/hoodie-shearling-coat.jpg",
+  picture_3: "https://www.umitbenan.com/1907/hoodie-shearling-coat.jpg",
+  picture_4: "https://www.umitbenan.com/1908/hoodie-shearling-coat.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 1800
+  )
+
+
+   Product.create!(
+  name: "HOODIE SHEARLING COAT",
+  detail: "100% Sheraling",
+  color: "Brown",
+  sizes: "44,46,48,50",
+  picture_1: "https://www.umitbenan.com/1895/hoodie-shearling-coat.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 1800
+  )
+
+  Product.create!(
+  name: "SHERPA JEANS JACKET",
+  detail: "Denim - 100% Cotton with Faux Fur Lining; ",
+  color: "Optical White",
+  sizes: "44,46,48",
+  picture_1: "https://www.umitbenan.com/1893/sherpa-jeans-jacket.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 149
+  )
+
+
+  Product.create!(
+  name: "TEJANO EMBROIDERY JEANS JACKET",
+  detail: "100% Cotton; 100% Suede Yoke;",
+  color: "Blue Denim",
+  sizes: "46,48",
+  picture_1: "https://www.umitbenan.com/998/tejano-embroidery-jeans-jacket.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 150
+  )
+
+  Product.create!(
+  name: "TEJANO EMBROIDERY JEANS JACKET",
+  detail: "100% Cotton; 100% Suede Yoke;",
+  color: "White Denim",
+  sizes: "46,48",
+  picture_1: "https://www.umitbenan.com/994/tejano-embroidery-jeans-jacket.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 150
+  )
+
+
+  Product.create!(
+  name: "DENIM STRIPES DOUBLE BREASTED SANCHEETO JACKET",
+  detail: "Double Breasted Sartorial Jacket; 100% Delavè Linen ",
+  color: "Blue Denim",
+  sizes: "46,48,50",
+  picture_1: "https://www.umitbenan.com/987/denim-stripes-double-breasted-sancheeto-jacket.jpg",
+  collection: fw_2018,
+  designer: umit,
+  price: 200
+  )
+
+
 
 stranger = Retailer.create!(
   first_name: "Stranger",
