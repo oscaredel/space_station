@@ -12,13 +12,15 @@
 
 </div>
 <div class="btn-add-to-selections">
-  <% if StoreProduct.pluck(:product_id).include?(product.id) %>
-  <%= simple_form_for :product, url: store_collection_store_product_path(product), method: :delete do |f| %>
-      <%= f.submit "Remove", class: "btn-space-station" %>
-    <% end %>
-  <% else %>
-    <%= simple_form_for :product, url: store_collection_store_products_path(product_id: product.id) do |f| %>
-      <%= f.submit "Add to Selections", class: "btn-space-station" %>
+  <% if current_retailer %>
+    <% if StoreProduct.pluck(:product_id).include?(product.id) %>
+    <%= simple_form_for :product, url: store_collection_store_product_path(product), method: :delete do |f| %>
+        <%= f.submit "Remove", class: "btn-space-station" %>
+      <% end %>
+    <% else %>
+      <%= simple_form_for :product, url: store_collection_store_products_path(product_id: product.id) do |f| %>
+        <%= f.submit "Add to Selections", class: "btn-space-station" %>
+      <% end %>
     <% end %>
   <% end %>
 </div>
