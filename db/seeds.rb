@@ -63,6 +63,7 @@ kika = Designer.create!(
 thurs = Designer.create!(
   brand: "Thursday, Sunday",
   city: "Melbourne",
+  detail: "",
   first_name: "X",
   last_name: "Y",
   email: "hahaha@designer.com",
@@ -172,12 +173,18 @@ thebodysuitofbarcelona = Designer.create!(
 thebodysuitofbarcelona.profile_photo_url = "http://68.media.tumblr.com/af19fa7491391e5b6b730bfe05e00868/tumblr_ovraggvQUg1sl7ipso1_500.jpg"
 
 bodybarca = Collection.create!(
-  season: "First",
+  season: "Second",
   year: 2018,
   detail: "Desert collection",
   designer: thebodysuitofbarcelona
 )
 
+bodybarca2 = Collection.create!(
+  season: "First",
+  year: 2018,
+  detail: "Meadow collection",
+  designer: thebodysuitofbarcelona
+)
 
 Product.create!(
   name: "THE SOPHIE BODYSUIT ARCTIC ICE ",
@@ -192,7 +199,7 @@ Product.create!(
   picture_1: "https://images.bigcartel.com/product_images/202724246/00410019.jpg?auto=format&fit=max&w=1500",
   picture_2: "https://images.bigcartel.com/product_images/202620818/BASICO+ARTIC2.jpg?auto=format&fit=max&w=1500",
   picture_3: "https://images.bigcartel.com/product_images/202749845/00410023.jpg?auto=format&fit=max&w=1500",
-  collection: bodybarca,
+  collection: bodybarca2,
   designer: thebodysuitofbarcelona,
   price: 43
   )
@@ -209,7 +216,7 @@ Product.create!(
   sizes: "small,medium,large",
   picture_1: "https://images.bigcartel.com/product_images/202722020/342.jpg?auto=format&fit=max&w=1500",
   picture_2: "https://images.bigcartel.com/product_images/202722050/00410023_nude.jpg?auto=format&fit=max&w=1500",
-  collection: bodybarca,
+  collection: bodybarca2,
   designer: thebodysuitofbarcelona,
   price: 40
   )
@@ -226,7 +233,7 @@ Product.create!(
   sizes: "small,medium,large",
   picture_1: "https://images.bigcartel.com/product_images/202723817/00410021_blanco.jpg?auto=format&fit=max&w=1500",
   picture_2: "https://images.bigcartel.com/product_images/202723826/00370032.jpg?auto=format&fit=max&w=1500",
-  collection: bodybarca,
+  collection: bodybarca2,
   designer: thebodysuitofbarcelona,
   price: 40
   )
@@ -259,6 +266,25 @@ Product.create!(
   sizes: "small,medium,large",
   picture_1: "https://images.bigcartel.com/product_images/202721753/00370011.jpg?auto=format&fit=max&w=1500",
   picture_2: "https://images.bigcartel.com/product_images/202724813/00370009.jpg?auto=format&fit=max&w=1500",
+  designer: thebodysuitofbarcelona,
+  price: 39,
+  collection: bodybarca2
+  )
+
+Product.create!(
+  name: "THE COPPI BODYSUIT WHITE",
+  detail: "Turtleneck and long sleeves bodysuit.
+Ribbed bodysuit made from premium soft Italian fabric.
+Snap closures.
+
+67% Italian Viscose 33% Elastane
+
+Made in Barcelona",
+  color: "White",
+  sizes: "small,medium,large",
+  picture_1: "https://images.bigcartel.com/product_images/202723169/RWR.jpg?auto=format&fit=max&w=1500",
+  picture_2: "https://images.bigcartel.com/product_images/202721177/00400027.jpg?auto=format&fit=max&w=1500",
+  picture_3:"https://images.bigcartel.com/product_images/202628378/CISNE+BLANCO+4.jpg?auto=format&fit=max&w=1500",
   designer: thebodysuitofbarcelona,
   price: 39,
   collection: bodybarca
@@ -961,18 +987,6 @@ Product.create!(
   price: 600
   )
 
-Product.create!(
-  name: "KIMONO",
-  detail: "Kimono with one patch pocket;
-grois-grain band side closure;
-multi stitched hems and UMIT BENAN logo label.",
-  color: "White",
-  sizes: "48,50",
-  picture_1: "https://www.umitbenan.com/2103/kimono.jpg",
-  collection: fw_2018,
-  designer: umit,
-  price: 200
-  )
 
   Product.create!(
   name: "KIMONO",
@@ -988,16 +1002,6 @@ multi stitched hems and UMIT BENAN logo label. 100% cotton piquet shirting;",
   )
 
 
-  Product.create!(
-  name: "KIMONO",
-  detail: "96% cotton, 4% stretch velvet;",
-  color: "Blue",
-  sizes: "48,50",
-  picture_1: "https://www.umitbenan.com/1184/kimono.jpg",
-  collection: fw_2018,
-  designer: umit,
-  price: 150
-  )
 
   Product.create!(
   name: "KIMONO",

@@ -1,10 +1,11 @@
  class DesignersController < ApplicationController
   def show
     @designer = Designer.find(params[:id])
+    session[:previous_page] = "designers#show"
   end
 
   def index
-    @designers = Designer.all
+    @designers = Designer.paginate(page: params[:page], per_page: 6)
   end
 
   def edit

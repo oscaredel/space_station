@@ -35,13 +35,15 @@
     right:25px;
     font-size: 20px;
     z-index: 9999999;
+    color: black;
     &:hover {
       opacity:1;
-      color: black;
+      color: $space-orange;
     }
   }
     .fa-star.selected {
-      color: black !important;
+      color: $space-orange !important;
+      opacity: 1 !important;
     }
 
   .product-details {
