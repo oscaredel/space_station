@@ -1,24 +1,8 @@
-<%= link_to designer_product_path(collection.designer, product) do %>
-  <div class="product-card product-card-high">
+<%= link_to designer_product_path(product.designer, product) do %>
+  <div class="product-card product-card-high" data-product='<%= product.id %>'>
     <div class="product-image product-image-tall" style="background-image:url('<%= image_url product.picture_1, crop: :fill %>');">
-      <% if StoreProduct.pluck(:product_id).include?(product.id) %>
 
-      <%= simple_form_for :product, url: store_collection_store_product_path(product), method: :delete do |f| %>
-      <label for="destroy-<%= product.id %>">
-               <i class="fa fa-star selected" aria-hidden="true"></i>
-      </label>
-      <input type="submit" name="commit" id="destroy-<%= product.id %>" value="Remove" class="hidden" data-disable-with="Remove">
-    <% end %>
-      <% else %>
-      <%= simple_form_for :product, url: store_collection_store_products_path(product_id: product.id) do |f| %>
-            <label for="submit-<%= product.id %>">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-
-            </label>
-            <input type="submit" id="submit-<%= product.id %>" name="commit" value="Add to Selections" class="hidden" data-disable-with="Add to Selections">
-          <% end %>
-
-      <% end %>
+      <%= render 'shared/star', product: product %>
 
     </div>
     <div class="product-details">
@@ -37,7 +21,7 @@
         </div>
       </div>
     </div>
+  <div id="product-notice-<%= product.id %>"></div>
   </div>
 <% end %>
-
 

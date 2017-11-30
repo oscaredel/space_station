@@ -1,0 +1,8 @@
+var productCard = document.querySelector("[data-product='<%= @product.id %>']")
+productCard.innerHTML = '<%= j render "shared/product_card", product: @product %>'
+
+var flashDiv = document.getElementById("product-notice-<%= @product.id %>")
+flashDiv.innerHTML = '<div class="alert alert-info alert-dismissible" role="alert">Added to selections</div>'
+$(flashDiv).fadeOut(5000)
+
+
