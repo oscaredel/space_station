@@ -475,6 +475,8 @@ This brand displays humorous designs through mixing things and surpassing common
 By doing so, ROCKET X LUNCHhas become a popular brand which is accepted as trendy and original with reasonable price among the young fashion influencers.
 ")
 
+
+
 rocket.profile_photo_url = "http://rocketxlunch.com/web/product/tiny/201709/3136_shop1_883602.jpg"
 
 rocket_col = Collection.create!(
@@ -487,9 +489,118 @@ the new beginning of a style story born in Africa.",
   designer: rocket
 )
 
+rocket_co = Collection.create!(
+  season: 'Fall',
+  year: 2018,
+  detail: "Seoul's soul and colors in fall",
+  designer: rocket)
 
 Product.create!(
-  name: "MAYANGA TOP",
+  name: "R FRINGE TRIM DENIM JK",
+  detail: "Bow detail - 100% cotton",
+  color: "Beige & blue",
+  sizes:"small,medium,large",
+  picture_1: "http://rocketxlunch.com/web/product/tiny/M)R-FRINGE-TRIM-DENIM-JK.jpg",
+  collection: rocket_co,
+  designer: rocket,
+  price: 49
+)
+
+Product.create!(
+  name: "R SHEEP MUSTANG",
+  detail: "Bow detail - 100% Shear",
+  color: "Black",
+  sizes:"small,medium,large",
+  picture_1: "http://rocketxlunch.com/web/product/tiny/201610/2091_shop1_133874.jpg",
+  collection: rocket_co,
+  designer: rocket,
+  price: 111
+)
+
+Product.create!(
+  name: "R FUR LINE CT",
+  detail: "Bow detail - 100% Shear",
+  color: "Black & (blue/white/red)",
+  sizes:"small,medium,large",
+  picture_1: "http://rocketxlunch.com/web/product/tiny/R-FUR-LINE-CT.jpg",
+  collection: rocket_co,
+  designer: rocket,
+  price: 111
+)
+
+Product.create!(
+  name: "R FUR TRIMMING JK",
+  detail: "Bow detail - 100% Shear",
+  color: "Navy",
+  sizes:"small,medium,large",
+  picture_1: "http://rocketxlunch.com/web/product/tiny/R-FUR-TRIMMING-JK.jpg",
+  collection: rocket_co,
+  designer: rocket,
+  price: 111
+)
+
+Product.create!(
+  name: "R ZIP DENIM JK",
+  detail: "Bow detail - 100% Shear",
+  color: "Navy",
+  sizes:"small,medium,large",
+  picture_1: "http://rocketxlunch.com/web/product/tiny/R-ZIP-DENIM-JK.jpg",
+  collection: rocket_co,
+  designer: rocket,
+  price: 111
+)
+
+Product.create!(
+  name: "R HOOK JK",
+  detail: "Bow detail - 100% cotton",
+  color: "white & blue",
+  sizes:"small,medium,large",
+  picture_1: "http://rocketxlunch.com/web/product/tiny/M)R-HOOK-JK.jpg",
+  collection: rocket_co,
+  designer: rocket,
+  price: 39
+)
+
+
+Product.create!(
+  name: "R DENIM JK",
+  detail: "Bow detail - 100% cotton",
+  color: "white & blue",
+  sizes:"small,medium,large",
+  picture_1: "http://rocketxlunch.com/web/product/tiny/R-DENIM-JK.jpg",
+  collection: rocket_co,
+  designer: rocket,
+  price: 59
+)
+
+
+Product.create!(
+  name: "R BACK CORDUROY DENIM JK",
+  detail: "Bow detail - 100% cotton",
+  color: "white & blue",
+  sizes:"small,medium,large",
+  picture_1: "http://rocketxlunch.com/web/product/tiny/201709/3078_shop1_506739.jpg",
+  collection: rocket_co,
+  designer: rocket,
+  price: 49
+)
+
+
+Product.create!(
+  name: "R REPEATED BUTTON RAGLAN JP",
+  detail: "Bow detail - 100% cotton",
+  color: "Black",
+  sizes:"small,medium,large",
+  picture_1: "http://rocketxlunch.com/web/product/tiny/201709/3081_shop1_264001.jpg",
+  collection: rocket_co,
+  designer: rocket,
+  price: 49
+)
+
+
+
+Product.create!(
+  name: "R GRINLY TOP",
   detail: "LIBAYA long cut out check top with bow detail - 100% cotton",
   color: "white & blue",
   sizes:"small,medium,large",

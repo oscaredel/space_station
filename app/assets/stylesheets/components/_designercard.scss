@@ -6,6 +6,7 @@
   text-align:center;
   padding: 0px;
   margin: 20px auto;
+  height: 370px;
   a {
     display: inline-flex;
     margin: 0 auto;
@@ -53,10 +54,14 @@
 }
 
 .brandname {
-  margin-top:9px;
-  font-size:14px;
+  margin-top: 9px;
+  font-size: 20px;
   text-transform: uppercase;
-    font-weight: bolder;
+  font-weight: bolder;
   text-align: center;
+}
+
+.brand-images {
+  display: flex;
 }
 
